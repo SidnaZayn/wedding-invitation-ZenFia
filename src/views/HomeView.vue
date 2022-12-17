@@ -18,16 +18,16 @@
       </div>
     </div>
     <div class="img">
-      <img src="we.jpg" class="card-img img1">
+      <img src="/we.jpg" class="card-img img1">
     </div>
   </section>
   <section id="dalil">
     <div class="text-center my-5 dalil-container">
       <div class="img">
-        <img data-aos="zoom-in" data-aos-delay="300" src="flower-1.png" alt="flower" class="abs img3">
+        <img data-aos="zoom-in" data-aos-delay="300" src="/flower-1.png" alt="flower" class="abs img3">
       </div>
       <div class="img">
-        <img data-aos="zoom-in" src="flower-1.png" alt="flower" class="abs img4">
+        <img data-aos="zoom-in" src="/flower-1.png" alt="flower" class="abs img4">
       </div>
       <div class="p-4 rounded-3 mx-3 shadow-sm" style="background-color:#f8f8f899;">
         <h2 class="card-title font-2" data-aos="flip-right">Ar-Rum : 21</h2>
@@ -51,7 +51,7 @@
       <div class="card mb-3 mx-5" data-aos="flip-right" data-aos-duration="1500">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="sidna.jpg" class="img-fluid rounded" alt="...">
+            <img src="/sidna.jpg" class="img-fluid rounded" alt="...">
           </div>
           <div class="col-md-8">
             <div class="card-body text-center p-0 mt-4 mb-2">
@@ -77,7 +77,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <img src="fia.jpg" class="img-fluid rounded" alt="...">
+            <img src="/fia.jpg" class="img-fluid rounded" alt="...">
           </div>
         </div>
       </div>
@@ -86,8 +86,8 @@
   <section id="schedule">
     <div class="text-center">
       <div class="img">
-        <img data-aos="zoom-in" data-aos-delay="300" src="flower-3-copy.png" alt="flower" class="abs img7">
-        <img data-aos="zoom-in" data-aos-delay="300" src="flower-3.png" alt="flower" class="abs img6">
+        <img data-aos="zoom-in" data-aos-delay="300" src="/flower-3-copy.png" alt="flower" class="abs img7">
+        <img data-aos="zoom-in" data-aos-delay="300" src="/flower-3.png" alt="flower" class="abs img6">
       </div>
       <div class="p-4 rounded-3 shadow-sm mt-2 mx-3" style="background-color:#f8f8f899;">
         <h5 class="card-title font-2" data-aos="zoom-in">Susunan Acara</h5>
@@ -182,7 +182,7 @@
   </section>
   <section id="amplopDigital">
     <div class="img text-center p-4" style="background:  url(bg-flower.png); background-size: 50%;">
-      <img data-aos="zoom-in" data-aos-duration="200" src="sa.jpg" class="card-img shadow img2">
+      <img data-aos="zoom-in" data-aos-duration="200" src="/sa.jpg" class="card-img shadow img2">
     </div>
     <div class="text-center">
       <div class="p-4 rounded-3 mt-2 mx-3 shadow-sm" data-aos="flip-down" style="background-color:#f8f8f899;">
@@ -196,9 +196,9 @@
           <div class="card shadow-sm">
             <div class="card-body">
               <h5 class="card-title cal">Via Bank</h5>
-              <img src="mandiri.jpg" class="card-img-top" alt="...">
+              <img src="/mandiri.jpg" class="card-img-top" alt="...">
               <p class="card-text">1390026051932 an. <br> Ariesty Rizky Aliefia (Mandiri)</p>
-              <img src="bri.jpg" class="card-img-top" alt="...">
+              <img src="/bri.jpg" class="card-img-top" alt="...">
               <p class="card-text">0545 01016247509 an. <br> Sidna Muhammad Zen (BRI)</p>
             </div>
           </div>
@@ -207,9 +207,9 @@
           <div class="card shadow-sm">
             <div class="card-body">
               <h5 class="card-title cal">Via Dompet Digital</h5>
-              <img src="gopay.jpg" class="card-img-top" alt="...">
+              <img src="/gopay.jpg" class="card-img-top" alt="...">
               <p class="card-text">081226158294 an. <br> Sidna Muhammad Zen</p>
-              <img src="ovo.jpg" class="card-img-top" alt="...">
+              <img src="/ovo.jpg" class="card-img-top" alt="...">
               <p class="card-text">081226158294 an. <br> Sidna Muhammad Zen</p>
             </div>
           </div>
@@ -222,26 +222,26 @@
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="500">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="kita.jpg" class="d-block w-100" alt="...">
+          <img src="/kita.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="kita1.jpg" class="d-block w-100" alt="...">
+          <img src="/kita1.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="kita2.jpg" class="d-block w-100" alt="...">
+          <img src="/kita2.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="kita3.jpg" class="d-block w-100" alt="...">
+          <img src="/kita3.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="kita3.jpg" class="d-block w-100" alt="...">
+          <img src="/kita3.jpg" class="d-block w-100" alt="...">
         </div>
       </div>
     </div>
     <div class="text-center">
       <div class="img">
-        <img data-aos="zoom-in" data-aos-delay="300" src="flower-2.png" alt="flower" class="abs img6">
-        <img data-aos="zoom-in" data-aos-delay="300" src="flower-2-copy.png" alt="flower" class="abs img7">
+        <img data-aos="zoom-in" data-aos-delay="300" src="/flower-2.png" alt="flower" class="abs img6">
+        <img data-aos="zoom-in" data-aos-delay="300" src="/flower-2-copy.png" alt="flower" class="abs img7">
       </div>
       <div class="p-4 rounded-3 m-4 shadow-sm" style="background-color:#f8f8f899;">
         <h1 data-aos="fade-down" class="card-title cal">Our Story</h1>
@@ -277,7 +277,7 @@
   <section id="footer">
 
     <div class="img p-3 text-center" data-aos="zoom-in">
-      <img src="akhir.jpg" class="card-img img5 shadow">
+      <img src="/akhir.jpg" class="card-img img5 shadow">
     </div>
     <div class="text-center mt-2 mb-4 mx-3" data-aos="fade-up" style="height:7vh;">
       <p class="card-text"> Kesan yang mendalam akan terukir dihati kami,
@@ -289,7 +289,7 @@
       <h1 class="cal">Terima Kasih</h1>
     </div>
     <div class="img text-center mt-5">
-      <img src="flower-4.png" class="card-img img8 mt-3">
+      <img src="/flower-4.png" class="card-img img8 mt-3">
     </div>
   </section>
 
