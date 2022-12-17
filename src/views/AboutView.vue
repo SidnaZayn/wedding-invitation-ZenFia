@@ -4,7 +4,7 @@
       <div data-aos="zoom-in" class="p-4 rounded-3 shadow-sm m-3 text-center" style="background-color:#f8f8f899;">
         <h1 class="font-2 mb-5" style="color: #65741f;">Wedding Invitation</h1>
         <div class="img">
-          <img data-aos="zoom-in" data-aos-delay="300" src="/Asset 1-1.png" alt="logo" class="img-to">
+          <img data-aos="zoom-in" data-aos-delay="300" src="/depan.png" alt="logo" class="img-to">
         </div>
         <h5 data-aos="zoom-in" data-aos-delay="500" style="color: #1b1b1b;" class="mt-5"><i>Dear,</i></h5>
         <h3 style="text-transform:uppercase;" data-aos="zoom-in" data-aos-delay="600" >{{ $route.params.name }}</h3>
