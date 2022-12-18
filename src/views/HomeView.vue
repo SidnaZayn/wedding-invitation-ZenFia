@@ -396,23 +396,6 @@
 <script setup>
 import { reactive, ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
-import pdfMake from "pdfmake/build/pdfmake";
-import pdfFonts from "pdfmake/build/vfs_fonts";
-
-pdfMake.vfs = pdfFonts.pdfMake.vfs;
-const exportPdf = () => {
-  let docDefinition = {
-    content: [
-      "Images can be also provided in dataURL format...",
-      {
-        image:qrcode + form.nama + spare + form.asal + spare + form.sebagai,
-        width: 200,
-      },
-    ],
-  };
-  const pdf = pdfMake.createPdf(docDefinition);
-  pdf.download();
-};
 
 onMounted(() => {
   myAudioFunction();
