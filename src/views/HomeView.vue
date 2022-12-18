@@ -22,6 +22,11 @@
   </div>
 
   <div v-if="isOpen === true">
+    <section id="music">
+      <audio loop autoplay>
+        <source src="/songs.mp3">
+      </audio>
+    </section>
     <section id="home">
       <div class="containers abs">
         <div class="text-center">
@@ -136,6 +141,9 @@
               <i class="bi bi-geo-alt"></i> Jl.Sawo Gang 1 Rt/RW 04/02
               Kel.Procot Kec.Slawi Kab.Tegal
             </p>
+            <a class="btn btn-secondary mt-3" href="https://goo.gl/maps/tpR4QbCKZdaKbAvs9" target="_blank">
+              <i class="bi bi-geo-fill"></i> lihat lokasi di maps
+            </a>
           </div>
           <!-- <div>
                 <h1 class="mt-5 cal" data-aos="fade-right">Ngunduh Mantu</h1>
@@ -235,6 +243,7 @@
                     <input v-model="form.asal" type="text" class="form-control" placeholder="Asal/Alamat" />
                   </div>
                   <select v-model="form.sebagai" class="form-select" aria-label="Default select example">
+                    <option value="" disabled selected>Datang Sebagai...</option>
                     <option value="Kerabat Ariesty R. Aliefia">
                       Kerabat Ariesty R. Aliefia
                     </option>
@@ -398,7 +407,7 @@ import { reactive, ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
 
 onMounted(() => {
-  myAudioFunction();
+  // myAudioFunction();
 });
 const route = useRoute();
 
@@ -407,7 +416,7 @@ const nama = route.params.name;
 let form = reactive({
   nama: nama.toUpperCase(),
   asal: "",
-  sebagai: "Datang Sebagai...",
+  sebagai: "",
   isHadir: false,
 });
 const isMengisi = ref(false);
@@ -429,13 +438,12 @@ const openInvite = () => {
 };
 
 //audio
-function myAudioFunction() {
-  var x = document.createElement("AUDIO");
-
-  x.setAttribute("src", "../songs.mp3");
-  x.setAttribute("autoplay", "");
-  document.body.appendChild(x);
-}
+// function myAudioFunction() {
+//   var x = document.createElement("AUDIO");
+//   x.setAttribute("src", "../songs.mp3");
+//   x.setAttribute("autoplay", "");
+//   document.body.appendChild(x);
+// }
 
 //countdown
 let menuju_halal = reactive({
