@@ -345,8 +345,8 @@
           " alt="qrnama" class="m-3 rounded-3 shadow" />
         </div>
         <div>
-          <p>Belum lengkap rasanya apabila kebahagiaan ini tidak tersimpan dalam bentuk kenangan indah. Scan QRCode
-            diatas untuk mendapatkan Souvenir menarik. <br> <strong>Terima Kasih 🙏 </strong></p>
+          <p>Belum lengkap rasanya apabila kebahagiaan ini tidak tersimpan dalam bentuk kenangan indah. Perlihatkan QRCode
+            diatas pada penerima tamu untuk mendapatkan Souvenir menarik. <br> <strong>Terima Kasih 🙏 </strong></p>
         </div>
       </div>
     </section>
