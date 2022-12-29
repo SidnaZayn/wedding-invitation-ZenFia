@@ -1,5 +1,3 @@
-<script setup></script>
-
 <template>
   <div v-if="isOpen === false">
     <section id="to">
@@ -23,9 +21,11 @@
 
   <div v-if="isOpen === true">
     <section id="music">
-      <audio loop autoplay>
-        <source src="/songs.mp3">
-      </audio>
+      <div v-if="myaudio">
+        <audio loop autoplay>
+          <source src="/songs.mp3">
+        </audio>
+      </div>
     </section>
     <section id="home">
       <div class="containers abs">
@@ -128,32 +128,41 @@
           <img data-aos="zoom-in" data-aos-delay="300" src="/flower-3.png" alt="flower" class="abs img6" />
         </div>
         <div class="p-4 rounded-3 shadow-sm mt-2 mx-3" style="background-color: #f8f8f899">
-          <h5 class="card-title font-2" data-aos="zoom-in">Susunan Acara</h5>
           <div>
-            <h1 class="mt-3 cal" data-aos="fade-right">Akad & Resepsi</h1>
+            <h3 class="mt-3 mb-0 cal" data-aos="fade-right">Akad</h3>
+            <div>
+              <small class="m-0" data-aos="flip-left">
+                <i class="bi bi-calendar4-event"></i> Minggu, 12 Maret 2023
+              </small>
+            </div>
+            <div><small class="m-0" data-aos="flip-left">
+                <i class="bi bi-clock"></i> 08.00 WIB
+              </small>
+            </div>
+            <div>
+              <small class="m-0" data-aos="flip-left">
+                <i class="bi bi-geo-alt"></i>Kediaman mempelai wanita
+              </small>
+            </div>
+          </div>
+          <div class="mt-5">
+            <p class="" data-aos="fade-right">Turut mengundang Bapak/Ibu/Saudara/i <strong
+                style="text-transform: uppercase">{{ $route.params.name }}</strong> pada acara :</p>
+            <h1 class="cal mt-3 mb-1" data-aos="fade-right">Resepsi</h1>
             <p class="m-0" data-aos="flip-left">
-              <i class="bi bi-calendar4-event"></i> Minggu, 12-03-23
+              <i class="bi bi-calendar4-event"></i> Minggu, 12 Maret 2023
             </p>
             <p class="m-0" data-aos="flip-left">
-              <i class="bi bi-clock"></i> 10.00 WIB-Selesai
+              <i class="bi bi-clock"></i> 11.00 WIB-Selesai
             </p>
             <p class="m-0" data-aos="flip-left">
-              <i class="bi bi-geo-alt"></i> Jl.Sawo Gang 1 Rt/RW 04/02
+              <i class="bi bi-geo-alt"></i> Jl.Sawo Gang 1 RT/RW 04/02
               Kel.Procot Kec.Slawi Kab.Tegal
             </p>
             <a class="btn btn-secondary mt-3" href="https://goo.gl/maps/tpR4QbCKZdaKbAvs9" target="_blank">
               <i class="bi bi-geo-fill"></i> lihat lokasi di maps
             </a>
           </div>
-          <!-- <div>
-                <h1 class="mt-5 cal" data-aos="fade-right">Ngunduh Mantu</h1>
-                <p class="m-0" data-aos="flip-right"><i class="bi bi-calendar4-event"></i> Senin, 13-03-23</p>
-                <p class="m-0" data-aos="flip-right"><i class="bi bi-clock"></i> 10.00 WIB</p>
-                <p class="m-0" data-aos="flip-right"><i class="bi bi-geo-alt"></i> Jl.Sawo Gang 1 Rt/RW 04/02
-                    Kel.Procot
-                    Kec.Slawi Kab.Tegal
-                </p>
-            </div> -->
         </div>
       </div>
     </section>
@@ -323,7 +332,24 @@
         </div>
       </div>
     </section>
-
+    <section id="qrcode" data-aos="flip-right">
+      <div class="text-center">
+        <div class="qrcode-down">
+          <img :src="
+  qrcode +
+  form.nama +
+  spare +
+  form.asal +
+  spare +
+  form.sebagai
+          " alt="qrnama" class="m-3 rounded-3 shadow" />
+        </div>
+        <div>
+          <p>Belum lengkap rasanya apabila kebahagiaan ini tidak tersimpan dalam bentuk kenangan indah. Scan QRCode
+            diatas untuk mendapatkan Souvenir menarik. <br> <strong>Terima Kasih 🙏 </strong></p>
+        </div>
+      </div>
+    </section>
     <section id="Story">
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="500">
         <div class="carousel-inner">
@@ -399,6 +425,10 @@
         <img src="/flower-4.png" class="card-img img8 mt-3" />
       </div>
     </section>
+    <span @click="music()" class="float my-float ms-3">
+      <button class="btn btn-secondary shadow" style="border-radius: 50%;">
+        <i class="bi bi-music-note"></i></button>
+    </span>
   </div>
 </template>
 
@@ -438,12 +468,10 @@ const openInvite = () => {
 };
 
 //audio
-// function myAudioFunction() {
-//   var x = document.createElement("AUDIO");
-//   x.setAttribute("src", "../songs.mp3");
-//   x.setAttribute("autoplay", "");
-//   document.body.appendChild(x);
-// }
+let myaudio = reactive(true);
+function music() {
+  myaudio = !myaudio;
+}
 
 //countdown
 let menuju_halal = reactive({

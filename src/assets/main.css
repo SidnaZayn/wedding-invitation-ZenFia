@@ -69,6 +69,15 @@
     color: #65741f;
 }
 
+.float {
+    position: fixed;
+    bottom: 40px;
+    left: auto;
+    text-align: center;
+    margin-top: 22px;
+    z-index: 999;
+  }
+  
 @media (max-width: 768px) {
     .app{
         width: 100%;
@@ -115,5 +124,7 @@
         width: 20%;
         left: 80%;
     }
-
+    .float {
+        bottom: 200px;
+      }
 }
