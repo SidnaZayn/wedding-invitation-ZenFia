@@ -130,16 +130,15 @@
                 style="text-transform: uppercase">{{ $route.params.name }}</strong> pada acara :</p>
             <h1 class="cal mt-3 mb-1" data-aos="fade-right">Resepsi</h1>
             <p class="m-0" data-aos="flip-left">
-              <i class="bi bi-calendar4-event"></i> Minggu, 13 Maret 2023
+              <i class="bi bi-calendar4-event"></i> Minggu, 12 Maret 2023
             </p>
             <p class="m-0" data-aos="flip-left">
-              <i class="bi bi-clock"></i> 10.00 WIB-Selesai
+              <i class="bi bi-clock"></i> 11.00 WIB-Selesai
             </p>
             <p class="m-0" data-aos="flip-left">
-              <i class="bi bi-geo-alt"></i>Jl. Mawardi RT.02, RW.01 desa Adiwerna, Kec.
-              Adiwerna,Kab.Tegal
+              <i class="bi bi-geo-alt"></i>Jl. Jl. Sawo gang 1 RT.04/RW.02, Kel. Procot, Kec. Slawi, Kab. Tegal
             </p>
-            <a class="btn btn-secondary mt-3" href="https://goo.gl/maps/UHQfW9rTr7yUNeXdA" target="_blank">
+            <a class="btn btn-secondary mt-3" href="https://goo.gl/maps/X66SRLbKLTVc3bQx5" target="_blank">
               <i class="bi bi-geo-fill"></i> lihat lokasi di maps
             </a>
           </div>
@@ -331,90 +330,90 @@
         </div>
       </div>
     </section>
-    </div>
-    
+  </div>
+
   <div v-show="isOpen" id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel"
-  data-bs-interval="1500">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="/kita.jpg" class="d-block w-100" alt="..." />
-    </div>
-    <div class="carousel-item">
-      <img src="/kita1.jpg" class="d-block w-100" alt="..." />
-    </div>
-    <div class="carousel-item">
-      <img src="/kita2.jpg" class="d-block w-100" alt="..." />
-    </div>
-    <div class="carousel-item">
-      <img src="/kita3.jpg" class="d-block w-100" alt="..." />
-    </div>
-    <div class="carousel-item">
-      <img src="/kita4.jpg" class="d-block w-100" alt="..." />
+    data-bs-interval="1500">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/kita.jpg" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="/kita1.jpg" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="/kita2.jpg" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="/kita3.jpg" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="/kita4.jpg" class="d-block w-100" alt="..." />
+      </div>
     </div>
   </div>
-</div>
-<div v-if="isOpen == true">
-  <section id="Story">
-    <div class="text-center">
-      <div class="img">
-        <img data-aos="zoom-in" data-aos-delay="300" src="/flower-2.png" alt="flower" class="abs img6" />
-        <img data-aos="zoom-in" data-aos-delay="300" src="/flower-2-copy.png" alt="flower" class="abs img7" />
+  <div v-if="isOpen == true">
+    <section id="Story">
+      <div class="text-center">
+        <div class="img">
+          <img data-aos="zoom-in" data-aos-delay="300" src="/flower-2.png" alt="flower" class="abs img6" />
+          <img data-aos="zoom-in" data-aos-delay="300" src="/flower-2-copy.png" alt="flower" class="abs img7" />
+        </div>
+        <div class="p-4 rounded-3 m-4 shadow-sm" style="background-color: #f8f8f899">
+          <h1 data-aos="fade-down" class="card-title cal">Our Story</h1>
+          <hr class="hr-1" />
+          <div data-aos="fade-right">
+            <h3 class="mt-5 mb-0 cal">First Impresion</h3>
+            <p class="m-0">22-02-22</p>
+            <p class="card-text">
+              Kisah ini berawal dari pertemuan kami sebagai kawan kerja di
+              sebuah restoran kecil di jantung Kab. Tegal. Canda, tawa, berbagi
+              kisah menjadi pendekat kami diawal perjumpaan.
+            </p>
+          </div>
+          <div data-aos="fade-left">
+            <h3 class="mt-5 mb-0 cal">Engagement</h3>
+            <p class="m-0">11-12-22</p>
+            <p class="card-text">
+              Perkenalan kami membawa pada keseriusan hubungan hingga kami
+              sepakat untuk melangsungkan acara Khitbah pada Minggu, 12 Desember
+              2022
+            </p>
+          </div>
+          <div data-aos="fade-right">
+            <h3 class="mt-5 mb-0 cal">Finally</h3>
+            <p class="m-0">12-03-23</p>
+            <p class="card-text">
+              12 Maret 2023, akan menjadi sejarah dalam kehidupan kami berdua
+              sebagai titik dimulainya kehidupan baru. Doakan kami agar dapat
+              mengarungi bahtera rumah tangga sampai maut memisahkan.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="p-4 rounded-3 m-4 shadow-sm" style="background-color: #f8f8f899">
-        <h1 data-aos="fade-down" class="card-title cal">Our Story</h1>
-        <hr class="hr-1" />
-        <div data-aos="fade-right">
-          <h3 class="mt-5 mb-0 cal">First Impresion</h3>
-          <p class="m-0">22-02-22</p>
-          <p class="card-text">
-            Kisah ini berawal dari pertemuan kami sebagai kawan kerja di
-            sebuah restoran kecil di jantung Kab. Tegal. Canda, tawa, berbagi
-            kisah menjadi pendekat kami diawal perjumpaan.
-          </p>
-        </div>
-        <div data-aos="fade-left">
-          <h3 class="mt-5 mb-0 cal">Engagement</h3>
-          <p class="m-0">11-12-22</p>
-          <p class="card-text">
-            Perkenalan kami membawa pada keseriusan hubungan hingga kami
-            sepakat untuk melangsungkan acara Khitbah pada Minggu, 12 Desember
-            2022
-          </p>
-        </div>
-        <div data-aos="fade-right">
-          <h3 class="mt-5 mb-0 cal">Finally</h3>
-          <p class="m-0">12-03-23</p>
-          <p class="card-text">
-            12 Maret 2023, akan menjadi sejarah dalam kehidupan kami berdua
-            sebagai titik dimulainya kehidupan baru. Doakan kami agar dapat
-            mengarungi bahtera rumah tangga sampai maut memisahkan.
-          </p>
-        </div>
+    </section>
+    <section id="footer">
+      <div class="img p-3 text-center" data-aos="zoom-in">
+        <img src="/akhir.jpg" class="card-img img5 shadow" />
       </div>
-    </div>
-  </section>
-  <section id="footer">
-    <div class="img p-3 text-center" data-aos="zoom-in">
-      <img src="/akhir.jpg" class="card-img img5 shadow" />
-    </div>
-    <div class="text-center mt-2 mb-4 mx-3" data-aos="fade-up" style="height: 7vh">
-      <p class="card-text">
-        Kesan yang mendalam akan terukir dihati kami, serta diiringi ucapan
-        terima kasih yang tulus, kepada Bapak/Ibu/Saudara/i berkenan hadir
-        untuk memberikan Doa Restu
-      </p>
-      <hr class="hr-2" />
-      <h1 class="cal">Terima Kasih</h1>
-    </div>
-    <div class="img text-center mt-5">
-      <img src="/flower-4.png" class="card-img img8 mt-3" />
-    </div>
-  </section>
-  <span @click="music()" class="float ms-3">
-    <button class="btn btn-secondary shadow" style="border-radius: 50%;">
-      <i class="bi bi-music-note"></i></button>
-  </span>
-</div>
+      <div class="text-center mt-2 mb-4 mx-3" data-aos="fade-up" style="height: 7vh">
+        <p class="card-text">
+          Kesan yang mendalam akan terukir dihati kami, serta diiringi ucapan
+          terima kasih yang tulus, kepada Bapak/Ibu/Saudara/i berkenan hadir
+          untuk memberikan Doa Restu
+        </p>
+        <hr class="hr-2" />
+        <h1 class="cal">Terima Kasih</h1>
+      </div>
+      <div class="img text-center mt-5">
+        <img src="/flower-4.png" class="card-img img8 mt-3" />
+      </div>
+    </section>
+    <span @click="music()" class="float ms-3">
+      <button class="btn btn-secondary shadow" style="border-radius: 50%;">
+        <i class="bi bi-music-note"></i></button>
+    </span>
+  </div>
   <div v-if="isOpen == false">
     <section id="to">
       <div data-aos="zoom-in" class="p-4 rounded-3 shadow-sm m-3 text-center" style="background-color: #f8f8f899">
