@@ -13,6 +13,7 @@ const router = createRouter({
     {
       path: '/:pathMatch(.*)*',
       name: 'not-found',
+      redirect: '/to/Fulan',
       component: NotFoundPageView
     },
   ]
