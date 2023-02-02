@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import QRScannerCamera from '../views/QRScannerCamera.vue'
 import NotFoundPageView from '../views/NotFoundView.vue'
 
 const router = createRouter({
@@ -11,11 +12,17 @@ const router = createRouter({
       component: HomeView
     },
     {
+      path: '/to/scanqr',
+      name: 'QRScanner',
+      component: QRScannerCamera
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: 'not-found',
       redirect: '/to/Fulan',
       component: NotFoundPageView
     },
+    
   ]
 })
 
