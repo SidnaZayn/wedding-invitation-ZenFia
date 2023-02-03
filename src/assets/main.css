@@ -14,7 +14,7 @@ body {
   z-index: 1;
 }
 .containers {
-  margin-top: 5vh;
+  margin-top: 90vh;
 }
 
 .cal {
@@ -89,7 +89,7 @@ body {
     width: 100%;
   }
   .containers {
-    top: 40vh;
+    margin-top: 40vh;
     font-size: small;
   }
   .card .card-body {
