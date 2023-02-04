@@ -9,14 +9,22 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/to/:name',
+      path: '/login',
+      name: 'Login',
+      component: Login
+    },
+    {
+      path: '/to/:id',
       name: 'home',
       component: HomeView
     },
     {
       path: '/to/scanqr',
       name: 'QRScanner',
-      component: QRScannerCamera
+      component: QRScannerCamera,
+      meta: {
+        isAuth: true
+      }
     },
     {
       path: '/:pathMatch(.*)*',
@@ -24,8 +32,27 @@ const router = createRouter({
       redirect: '/to/Fulan',
       component: NotFoundPageView
     },
-    
+    {
+      path: '/dashboard',
+      name: 'Dashboard',
+      component: Dashboard,
+      meta: {
+        isAuth: true
+      }
+    },
   ]
 })
 
+router.beforeEach((to, from, next) => {
+  // console.log(store.getters.isAuthenticated)
+  if (to.matched.some((record) => record.meta.isAuth)) {
+    if (localStorage.getItem('login')) {
+      next();
+      return;
+    }
+    next("/login");
+  } else {
+    next();
+  }
+});
 export default router

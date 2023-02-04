@@ -51,9 +51,9 @@ const login = ref({
 const router = useRouter();
 
 const loginDashboard = () => {
-  if (login.value.username == "fia") {
-    if (login.value.password == "procot321") {
-      localStorage.setItem("login", "procot321");
+  if (login.value.username == "wedding_kita") {
+    if (login.value.password == "12032023") {
+      localStorage.setItem("login", "12032023");
       alert("berhasil masuk");
       router.push({ name: "Dashboard" });
     } else {

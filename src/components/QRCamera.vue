@@ -10,15 +10,15 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body">
-            <div v-if="data_tamu[0].length > 1">
+            <div v-if="!isError">
               <div class="text-center">
                 <p>tamu:</p>
                 <h4>{{ data_tamu[0][1] }}</h4>
                 <h4>{{ data_tamu[0][2] }}</h4>
-                <br>
+                <br />
                 <p>datang sebagai:</p>
                 <h4>{{ data_tamu[0][3] }}</h4>
-                <br>
+                <br />
                 <p>Silahkan berikan souvenir</p>
               </div>
             </div>
@@ -99,6 +99,7 @@ export default {
       isPhotoTaken: false,
       base_url: "http://127.0.0.1:8008/api/1.0/",
       data_tamu: {},
+      isError: true,
     };
   },
   methods: {
@@ -129,6 +130,7 @@ export default {
       console.log("CameraClosed");
     },
     toggleCamera() {
+      this.isError = true;
       if (this.isCameraOpen) {
         this.isCameraOpen = false;
         this.isPhotoTaken = false;
@@ -162,9 +164,11 @@ export default {
         const res = await axios.post(this.base_url + "readqr", data);
         const res_promise = res.data.data;
         this.data_tamu = res_promise;
+        this.isError = false;
       } catch (error) {
         const res_promise = error.response.data.data;
         this.data_tamu = res_promise;
+        this.isError = true;
       }
     },
   },
