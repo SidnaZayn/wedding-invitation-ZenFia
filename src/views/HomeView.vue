@@ -603,10 +603,9 @@ import { reactive, ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
 
 const route = useRoute();
-const base_url = "http://127.0.0.1:8008/api/1.0/";
 const id = route.params.id;
 onMounted(async () => {
-  const getTamu = await axios.get(base_url + "lihat_data_satu_tamu?id=" + id);
+  const getTamu = await axios.get("lihat_data_satu_tamu?id=" + id);
   const tamu = getTamu.data.data[0];
   form.value.nama = tamu[1];
   form.value.asal = tamu[2];
