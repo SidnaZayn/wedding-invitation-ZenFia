@@ -161,7 +161,7 @@ export default {
         time: Date.now(),
       };
       try {
-        const res = await axios.post(this.base_url + "readqr", data);
+        const res = await axios.post("scanqr", data);
         const res_promise = res.data.data;
         this.data_tamu = res_promise;
         this.isError = false;
