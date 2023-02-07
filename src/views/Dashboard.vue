@@ -456,7 +456,7 @@ const editTamuAction = async () => {
 
 const getTamu = async () => {
   const res = await axios.get("lihat_data_tamu");
-  dataTamu.value = res.data.data;
+  dataTamu.value = res.data;
   dataTable.value = dataTamu.value.slice(0, 5);
 };
 
@@ -494,7 +494,7 @@ const tambahTamu = async () => {
     alamat: "",
     hubungan: "",
   };
-  alert(res.data.data);
+  alert(res.data);
   await getTamu();
 };
 const summary = ref({
