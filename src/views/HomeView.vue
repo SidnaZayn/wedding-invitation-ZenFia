@@ -182,7 +182,7 @@
                 <i class="bi bi-calendar4-event"></i> Minggu, 12 Maret 2023
               </p>
               <p class="m-0" data-aos="flip-left">
-                <i class="bi bi-clock"></i> 11.00 WIB-Selesai
+                <i class="bi bi-clock"></i> 11.00 - 14.00 WIB
               </p>
               <p class="m-0" data-aos="flip-left">
                 <i class="bi bi-geo-alt"></i>Jl. Jl. Sawo gang 1 RT.04/RW.02,
@@ -406,25 +406,6 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section id="qrcode" data-aos="flip-right" v-show="form.isHadir !== 2">
-        <div class="text-center">
-          <div class="qrcode-down">
-            <img
-              :src="qrcode + route.params.id"
-              alt="qrnama"
-              class="m-3 rounded-3 shadow"
-            />
-          </div>
-          <div>
-            <p>
-              Belum lengkap rasanya apabila kebahagiaan ini tidak tersimpan
-              dalam bentuk kenangan indah. Perlihatkan QRCode diatas pada
-              penerima tamu untuk mendapatkan Souvenir menarik. <br />
-              <strong>Terima Kasih 🙏 </strong>
-            </p>
           </div>
         </div>
       </section>
