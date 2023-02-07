@@ -402,14 +402,15 @@ import axios from "axios";
 const searchInput = ref("");
 const searchName = async () => {
   const res = await axios.get("search?params=" + searchInput.value);
-  dataTamu.value = res.data.data;
+  dataTamu.value = res.data;
   dataTable.value = dataTamu.value.slice(0, 5);
 };
 
 const resetSearch = async () => {
   const res = await axios.get("search?params=");
-  dataTamu.value = res.data.data;
+  dataTamu.value = res.data;
   dataTable.value = dataTamu.value.slice(0, 5);
+  searchInput.value = "";
 };
 
 const tambahTamuForm = ref({

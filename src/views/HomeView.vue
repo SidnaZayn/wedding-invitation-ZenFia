@@ -587,7 +587,7 @@ const route = useRoute();
 const id = route.params.id;
 onMounted(async () => {
   const getTamu = await axios.get("lihat_data_satu_tamu?id=" + id);
-  const tamu = getTamu.data.data[0];
+  const tamu = getTamu.data[0];
   form.value.nama = tamu[1];
   form.value.asal = tamu[2];
   form.value.sebagai = tamu[3];
@@ -604,7 +604,7 @@ let form = ref({
 
 const kehadiran = async (value) => {
   const getTamu = await axios.post(
-    base_url + "ubah_kehadiran?id=" + id + "&kehadiran=" + value
+    "ubah_kehadiran?id=" + id + "&kehadiran=" + value
   );
   form.value.isHadir = value;
 };

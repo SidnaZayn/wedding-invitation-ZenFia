@@ -164,6 +164,7 @@ export default {
         const res = await axios.post("scanqr", data);
         const res_promise = res.data.data;
         this.data_tamu = res_promise;
+        console.log(this.data_tamu);
         this.isError = false;
       } catch (error) {
         const res_promise = error.response.data.data;
