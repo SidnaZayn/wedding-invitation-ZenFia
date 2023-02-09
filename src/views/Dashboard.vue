@@ -8,47 +8,19 @@
         <h4 class="cal text-white" data-aos="flip-down">Menuju Acara</h4>
         <div class="row">
           <div class="text-center col-3" data-aos="flip-right">
-            <div
-              class="py-2 px-1 rounded-3 shadow-sm mb-2"
-              style="background-color: #7b8fa1"
-              id="hari"
-            ></div>
+            <div class="py-2 px-1 rounded-3 shadow-sm mb-2" style="background-color: #7b8fa1" id="hari"></div>
             <p>Hari</p>
           </div>
-          <div
-            class="text-center col-3"
-            data-aos="flip-right"
-            data-aos-delay="200"
-          >
-            <div
-              class="py-2 px-1 rounded-3 shadow-sm mb-2"
-              style="background-color: #7b8fa1"
-              id="jam"
-            ></div>
+          <div class="text-center col-3" data-aos="flip-right" data-aos-delay="200">
+            <div class="py-2 px-1 rounded-3 shadow-sm mb-2" style="background-color: #7b8fa1" id="jam"></div>
             <p>Jam</p>
           </div>
-          <div
-            class="text-center col-3"
-            data-aos="flip-right"
-            data-aos-delay="300"
-          >
-            <div
-              class="py-2 px-1 rounded-3 shadow-sm mb-2"
-              style="background-color: #7b8fa1"
-              id="menit"
-            ></div>
+          <div class="text-center col-3" data-aos="flip-right" data-aos-delay="300">
+            <div class="py-2 px-1 rounded-3 shadow-sm mb-2" style="background-color: #7b8fa1" id="menit"></div>
             <p>Menit</p>
           </div>
-          <div
-            class="text-center col-3"
-            data-aos="flip-right"
-            data-aos-delay="400"
-          >
-            <div
-              class="py-2 px-1 rounded-3 shadow-sm mb-2"
-              style="background-color: #7b8fa1"
-              id="detik"
-            ></div>
+          <div class="text-center col-3" data-aos="flip-right" data-aos-delay="400">
+            <div class="py-2 px-1 rounded-3 shadow-sm mb-2" style="background-color: #7b8fa1" id="detik"></div>
             <p>Detik</p>
           </div>
         </div>
@@ -79,27 +51,15 @@
       <div class="row mt-5 mx-3">
         <div class="col-6">
           <!-- Button trigger modal -->
-          <button
-            type="button"
-            class="btn btn-secondary btn-sm mt-2"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-          >
+          <button type="button" class="btn btn-secondary btn-sm mt-2" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
             Tambah Tamu Undangan
           </button>
         </div>
         <div class="col-6">
           <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search name"
-              placeholder="Search"
-              v-model="searchInput"
-            />
-            <button
-              class="btn btn-outline-success me-2"
-              @click.prevent="searchName()"
-            >
+            <input class="form-control me-2" type="search name" placeholder="Search" v-model="searchInput" />
+            <button class="btn btn-outline-success me-2" @click.prevent="searchName()">
               Search
             </button>
             <button class="btn btn-warning" @click.prevent="resetSearch()">
@@ -148,37 +108,19 @@
               }}</small>
             </td>
             <td>
-              <div
-                class="btn-group btn-group-sm"
-                role="group"
-                aria-label="Basic example"
-              >
-                <router-link
-                  :to="`/to/${data[0]}`"
-                  type="button"
-                  class="btn btn-primary fs-10"
-                  title="lihat undangan"
-                  ><i class="bi bi-eye"></i
-                ></router-link>
-                <button
-                  data-bs-toggle="modal"
-                  data-bs-target="#modalEdit"
-                  type="button"
-                  class="btn btn-warning fs-10"
-                  title="edit data"
-                  @click="ubahdata(data[0])"
-                >
+              <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                <router-link :to="`/to/${data[0]}`" type="button" class="btn btn-primary fs-10"
+                  title="lihat undangan"><i class="bi bi-eye"></i></router-link>
+                <button data-bs-toggle="modal" data-bs-target="#modalEdit" type="button" class="btn btn-warning fs-10"
+                  title="edit data" @click="ubahdata(data[0])">
                   <i class="bi bi-pencil"></i>
                 </button>
-                <button
-                  @click="copyId(data[0])"
-                  data-bs-toggle="modal"
-                  data-bs-target="#modalLink"
-                  type="button"
-                  class="btn btn-success fs-10"
-                  title="bagikan ke whatsapp"
-                >
+                <button @click="copyId(data[0])" data-bs-toggle="modal" data-bs-target="#modalLink" type="button"
+                  class="btn btn-success fs-10" title="bagikan ke whatsapp">
                   <i class="bi bi-whatsapp"></i>
+                </button>
+                <button @click="deleteTamu(data[0])" type="button" class="btn btn-danger fs-10" title="hapus tamu ini">
+                  <i class="bi bi-trash"></i>
                 </button>
               </div>
             </td>
@@ -186,205 +128,107 @@
         </table>
         <div class="row">
           <div class="col-12 mx-auto">
-            <button
-              class="btn btn-outline-success mx-2"
-              @click="pagination_decrement()"
-            >
+            <button class="btn btn-outline-success mx-2" @click="pagination_decrement()">
               &lt;
             </button>
-            <button
-              class="btn btn-outline-success mx-2"
-              @click="pagination_increment()"
-            >
+            <button class="btn btn-outline-success mx-2" @click="pagination_increment()">
               >
             </button>
           </div>
         </div>
       </div>
       <!-- Modal -->
-      <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="exampleModalLabel">Data Tamu</h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <div class="col-12">
                 <label for="inputname" class="form-label">Nama</label>
-                <input
-                  type="name"
-                  class="form-control"
-                  id="text"
-                  v-model="tambahTamuForm.nama"
-                />
+                <input type="name" class="form-control" id="text" v-model="tambahTamuForm.nama" />
               </div>
               <div class="col-12">
                 <label for="inputalamat" class="form-label">Alamat</label>
-                <input
-                  type="address"
-                  class="form-control"
-                  id="text"
-                  v-model="tambahTamuForm.alamat"
-                />
+                <input type="address" class="form-control" id="text" v-model="tambahTamuForm.alamat" />
               </div>
               <div class="col-12">
                 <label for="inputAddress" class="form-label">Hubungan</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="text"
-                  v-model="tambahTamuForm.hubungan"
-                />
+                <input type="text" class="form-control" id="text" v-model="tambahTamuForm.hubungan" />
               </div>
             </div>
             <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                 Close
               </button>
-              <button
-                type="button"
-                class="btn btn-primary"
-                @click="tambahTamu()"
-                data-bs-dismiss="modal"
-                :disabled="
-                  !tambahTamuForm.nama ||
-                  !tambahTamuForm.alamat ||
-                  !tambahTamuForm.hubungan
-                "
-              >
+              <button type="button" class="btn btn-primary" @click="tambahTamu()" data-bs-dismiss="modal" :disabled="
+                !tambahTamuForm.nama ||
+                !tambahTamuForm.alamat ||
+                !tambahTamuForm.hubungan
+              ">
                 Tambah Tamu
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div
-        class="modal fade"
-        id="modalEdit"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
+      <div class="modal fade" id="modalEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="exampleModalLabel">
                 Edit Data Tamu
               </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
             <div class="modal-body">
               <div class="col-12">
                 <label for="inputname" class="form-label">Nama</label>
-                <input
-                  type="name"
-                  class="form-control"
-                  id="text"
-                  v-model="tambahTamuForm.nama"
-                />
+                <input type="name" class="form-control" id="text" v-model="tambahTamuForm.nama" />
               </div>
               <div class="col-12">
                 <label for="inputalamat" class="form-label">Alamat</label>
-                <input
-                  type="address"
-                  class="form-control"
-                  id="text"
-                  v-model="tambahTamuForm.alamat"
-                />
+                <input type="address" class="form-control" id="text" v-model="tambahTamuForm.alamat" />
               </div>
               <div class="col-12">
                 <label for="inputAddress" class="form-label">Hubungan</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="text"
-                  v-model="tambahTamuForm.hubungan"
-                />
+                <input type="text" class="form-control" id="text" v-model="tambahTamuForm.hubungan" />
               </div>
             </div>
             <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                 Close
               </button>
-              <button
-                type="button"
-                class="btn btn-warning"
-                @click="editTamuAction()"
-                data-bs-dismiss="modal"
-                :disabled="
-                  !tambahTamuForm.nama ||
-                  !tambahTamuForm.alamat ||
-                  !tambahTamuForm.hubungan
-                "
-              >
+              <button type="button" class="btn btn-warning" @click="editTamuAction()" data-bs-dismiss="modal" :disabled="
+                !tambahTamuForm.nama ||
+                !tambahTamuForm.alamat ||
+                !tambahTamuForm.hubungan
+              ">
                 Edit Tamu
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div
-        class="modal fade"
-        id="modalLink"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
+      <div class="modal fade" id="modalLink" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="exampleModalLabel">LINK</h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
             <div class="modal-body">
               <div class="col-12">
                 <label for="inputname" class="form-label">Link</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inputname"
-                  v-model="sharelink"
-                />
+                <input type="text" class="form-control" id="inputname" v-model="sharelink" />
               </div>
             </div>
             <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                 Close
               </button>
             </div>
@@ -400,6 +244,18 @@ import { computed, onMounted, ref } from "@vue/runtime-core";
 import axios from "axios";
 
 const searchInput = ref("");
+
+const deleteTamu = async (id) => {
+  if (confirm("apakah anda akan menghapus data ini?") == true) {
+    const res = await axios.delete("delete_data_satu_tamu?id=" + id);
+    alert(res.data.data)
+  } else {
+    alert("data tidak jadi dihapus")
+  }
+
+  await getTamu()
+}
+
 const searchName = async () => {
   const res = await axios.get("search?params=" + searchInput.value);
   dataTamu.value = res.data;
@@ -426,9 +282,9 @@ const selectedEditId = ref();
 const ubahdata = async (id) => {
   selectedEditId.value = id;
   const res = await axios.get("lihat_data_satu_tamu?id=" + id);
-  tambahTamuForm.value.nama = res.data.data[0][1];
-  tambahTamuForm.value.alamat = res.data.data[0][2];
-  tambahTamuForm.value.hubungan = res.data.data[0][3];
+  tambahTamuForm.value.nama = res.data[0][1];
+  tambahTamuForm.value.alamat = res.data[0][2];
+  tambahTamuForm.value.hubungan = res.data[0][3];
 };
 
 const sharelink = computed(() => {
@@ -443,13 +299,13 @@ const editTamuAction = async () => {
   const data = tambahTamuForm.value;
   const res = await axios.post(
     "edit_data_tamu?id=" +
-      selectedEditId.value +
-      "&nama=" +
-      data.nama +
-      "&alamat=" +
-      data.alamat +
-      "&jenis_tamu=" +
-      data.hubungan
+    selectedEditId.value +
+    "&nama=" +
+    data.nama +
+    "&alamat=" +
+    data.alamat +
+    "&jenis_tamu=" +
+    data.hubungan
   );
   await getTamu();
   alert("done");
@@ -484,11 +340,11 @@ const tambahTamu = async () => {
   const data = tambahTamuForm.value;
   const res = await axios.post(
     "tambah_tamu?nama=" +
-      data.nama +
-      "&alamat=" +
-      data.alamat +
-      "&jenis_tamu=" +
-      data.hubungan
+    data.nama +
+    "&alamat=" +
+    data.alamat +
+    "&jenis_tamu=" +
+    data.hubungan
   );
   tambahTamuForm.value = {
     nama: "",
