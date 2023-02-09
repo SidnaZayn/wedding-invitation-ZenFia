@@ -432,7 +432,7 @@ const ubahdata = async (id) => {
 };
 
 const sharelink = computed(() => {
-  return "http://localhost:8000/" + selectedEditId.value;
+  return "https://zen-fia.undangan-online-tegal.my.id/to/" + selectedEditId.value;
 });
 
 const copyId = (id) => {
