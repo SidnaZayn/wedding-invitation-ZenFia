@@ -1,12 +1,6 @@
 <template>
   <div>
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body">
@@ -27,12 +21,7 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button
-              type="button"
-              data-bs-dismiss="modal"
-              class="btn btn-primary"
-              @click="toggleCamera()"
-            >
+            <button type="button" data-bs-dismiss="modal" class="btn btn-primary" @click="toggleCamera()">
               scan lagi
             </button>
           </div>
@@ -46,50 +35,28 @@
           <span v-else>Close Camera</span>
         </button>
         <div class="video-container">
-          <video
-            v-show="isCameraOpen && !isPhotoTaken"
-            class="camera-video rounded shadow-lg p-3"
-            ref="camera"
-            :width="450"
-            :height="337"
-            autoplay
-            playsinline
-          ></video>
+          <video v-show="isCameraOpen && !isPhotoTaken" class="camera-video rounded shadow-lg p-3" ref="camera"
+            :width="450" :height="337" autoplay playsinline></video>
           <div class="container" v-show="isPhotoTaken">
             <div class="card shadow p-3">
-              <canvas
-                id="photoTaken"
-                class="canvas-photo shadow rounded"
-                ref="canvas"
-                :width="450"
-                :height="337"
-              ></canvas>
+              <canvas id="photoTaken" class="canvas-photo shadow rounded" ref="canvas" :width="450"
+                :height="337"></canvas>
             </div>
           </div>
         </div>
-        <button
-          v-if="!isPhotoTaken && isCameraOpen"
-          class="btn btn-success my-3"
-          @click="takePhoto"
-        >
+        <button v-if="!isPhotoTaken && isCameraOpen" class="btn btn-success my-3" @click="takePhoto">
           <span>Snap!</span>
         </button>
-        <a
-          v-show="isPhotoTaken && isCameraOpen"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
-          class="btn btn-success my-3"
-          role="button"
-          @click="downloadImage"
-        >
+        <a v-show="isPhotoTaken && isCameraOpen" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          class="btn btn-success my-3" role="button" @click="downloadImage">
           deteksi QR Code
         </a>
       </div>
     </div>
   </div>
 </template>
-  
-  <script>
+
+<script>
 import axios from "axios";
 export default {
   name: "Camera",
@@ -97,7 +64,6 @@ export default {
     return {
       isCameraOpen: false,
       isPhotoTaken: false,
-      base_url: "http://127.0.0.1:8008/api/1.0/",
       data_tamu: {},
       isError: true,
     };
@@ -106,7 +72,10 @@ export default {
     createCameraElement() {
       const constraints = (window.constraints = {
         audio: false,
-        video: true,
+        video: {
+          facingMode: { exact: "environment" }
+        },
+
       });
 
       navigator.mediaDevices
@@ -175,8 +144,8 @@ export default {
   },
 };
 </script>
-  
-  <style>
+
+<style>
 .camera {
   position: fixed;
   top: 0;
@@ -205,4 +174,3 @@ export default {
   flex-direction: column;
 }
 </style>
-  
