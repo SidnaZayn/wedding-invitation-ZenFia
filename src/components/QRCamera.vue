@@ -36,7 +36,7 @@
         </button>
         <div class="video-container">
           <video v-show="isCameraOpen && !isPhotoTaken" class="camera-video rounded shadow-lg p-3" ref="camera"
-            :width="450" :height="337" autoplay playsinline></video>
+            style="width: 67vw; height:30vh;" autoplay playsinline></video>
           <div class="container" v-show="isPhotoTaken">
             <div class="card shadow p-3">
               <canvas id="photoTaken" class="canvas-photo shadow rounded" ref="canvas" :width="450"
@@ -75,7 +75,10 @@ export default {
         video: {
           facingMode: { exact: "environment" }
         },
-
+      });
+      const constraints2 = (window.constraints = {
+        audio: false,
+        video: true
       });
 
       navigator.mediaDevices
@@ -84,10 +87,10 @@ export default {
           this.$refs.camera.srcObject = stream;
         })
         .catch((error) => {
-          alert(
-            error,
-            "May the browser didn't support or there is some errors."
-          );
+          navigator.mediaDevices
+            .getUserMedia(constraints2).then((stream) => {
+              this.$refs.camera.srcObject = stream;
+            })
         });
     },
     stopCameraStream() {
