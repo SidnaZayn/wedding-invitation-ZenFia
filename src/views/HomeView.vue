@@ -315,7 +315,7 @@
                       />
                       <br />
                       <small>
-                        Tunjukan Qrcode ini ketika anda akan chek in ke acara kami, untuk Konfirmasik kehadiran
+                        Tunjukan Qrcode ini ketika anda akan chek in ke acara kami, untuk Konfirmasi kehadiran
                       </small>
                       <br />
                       <button class="btn btn-secondary" data-bs-dismiss="modal">
