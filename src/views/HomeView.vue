@@ -315,8 +315,7 @@
                       />
                       <br />
                       <small>
-                        simpan atau download QR Code diatas untuk mendapatkan
-                        Souvenir menarik
+                        Tunjukan Qrcode ini ketika anda akan chek in ke acara kami, untuk Konfirmasik kehadiran
                       </small>
                       <br />
                       <button class="btn btn-secondary" data-bs-dismiss="modal">
