@@ -2,6 +2,9 @@
   <div class="app">
     <div v-if="isOpen == true">
       <!-- I Love Youuuuuuu -->
+      <div>
+        <h1>I love Ariesty Rizky Aliefia</h1>
+      </div>
       <section id="music">
         <div v-if="myaudio">
           <audio loop autoplay>
