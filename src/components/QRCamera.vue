@@ -36,11 +36,11 @@
         </button>
         <div class="video-container">
           <video v-show="isCameraOpen && !isPhotoTaken" class="camera-video rounded shadow-lg p-3" ref="camera"
-            style="width: 67vw; height:30vh;" autoplay playsinline></video>
+            style="width: 384px; height:512px;" autoplay playsinline></video>
           <div class="container" v-show="isPhotoTaken">
             <div class="card shadow p-3">
-              <canvas id="photoTaken" class="canvas-photo shadow rounded" ref="canvas" :width="450"
-                :height="337"></canvas>
+              <canvas id="photoTaken" class="canvas-photo shadow rounded" ref="canvas" :width="384"
+                :height="512"></canvas>
             </div>
           </div>
         </div>
