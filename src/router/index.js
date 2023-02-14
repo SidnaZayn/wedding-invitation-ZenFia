@@ -4,6 +4,7 @@ import QRScannerCamera from '../views/QRScannerCamera.vue'
 import NotFoundPageView from '../views/NotFoundView.vue'
 import Dashboard from "../views/Dashboard.vue";
 import Login from "../views/Login.vue";
+import BuatAyang from "../views/buatAyang.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,6 +13,11 @@ const router = createRouter({
       path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/buat-ayang',
+      name: 'BuatAyang',
+      component: BuatAyang
     },
     {
       path: '/to/:id',
