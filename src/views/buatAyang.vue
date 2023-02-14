@@ -77,6 +77,7 @@
                         <h3>hehehehe betul semua. GOOD JOOOBBB</h3>
                         <p>Nah sekarang, mas ada kejutan lain buat ade. klik tombol dibawah ini yaaaaa</p>
                         <a href="https://youtu.be/yVPWZodKS9s" target="_blank" class="btn btn-primary">Klik</a>
+                        <p class="mt-3">maaf yaaa. mungkin valentine mas ngga sekeren orang orang lain. yang mas lakuin juga mungkin ngga semewah orang lain. tapi mas pengen ade tau kalo sayang nya mas ke ade itu tuluussss banget, cuman ade yang bisa bikin mas gini.</p>
                         <p>semoga ade suka. xixixixi. love uuuuu</p>
                         <h2>Happy Valentine My Loveeeee</h2>
                     </div>
