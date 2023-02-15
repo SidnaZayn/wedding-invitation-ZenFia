@@ -160,7 +160,7 @@
         <div class="img">
           <img data-aos="zoom-in" src="/flower-1.png" alt="flower" class="abs img4" />
         </div>
-        <div class="p-4 rounded-3 mx-3 shadow-sm" style="background-color: #f8f8f899">
+        <div class="p-4 rounded-3 mx-3 shadow-sm text-center" style="background-color: #f8f8f899">
           <h2 class="card-title font-2" data-aos="flip-right">Kirim Kartu Ucapan</h2>
           <p data-aos="flip-right">
           <div class="mb-3">
@@ -177,6 +177,7 @@
           </div>
           </p>
         </div>
+        <button type="submit">Kirim</button>
       </div>
       <section>
       </section>
