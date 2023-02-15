@@ -317,16 +317,10 @@
                 <div class="card-body">
                   <h5 class="card-title cal">Via Dompet Digital</h5>
                   <img src="/gopay.jpg" class="card-img-top" alt="..." />
-                  <p class="card-text">
-                    081226158294 an. <br />
-                    Sidna Muhammad Zen
-                  </p>
+                  <input class="card-text" type="text" value=" 087725872057" id="myInput"><button onclick="myFunction()"><i class="bi bi-clipboard"></i></button>
+                  <p>an.Ariesty Rizky Aliefia</p>
                   <img src="/ovo.jpg" class="card-img-top" alt="..." />
-                  <p class="card-text">
-                    087725872057 an. <br />
-                    Ariesty Rizky Aliefia
-                  </p>
-                  <input type="text" value=" 087725872057" id="myInput"><button onclick="myFunction()"><i class="bi bi-clipboard"></i></button>
+                  <input class="card-text" type="text" value=" 087725872057" id="myInput"><button onclick="myFunction()"><i class="bi bi-clipboard"></i></button>
                   <p>an.Ariesty Rizky Aliefia</p>
                 </div>
               </div>
