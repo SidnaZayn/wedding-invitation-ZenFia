@@ -199,9 +199,34 @@
           </div>
         </div>
       </section>
-             <div>
-                <h5 class="card-text font-2">Kirim ucapan </h5>
-              </div>
+                      <div class="text-center my-5 dalil-container">
+          <div class="img">
+            <img
+              data-aos="zoom-in"
+              data-aos-delay="300"
+              src="/flower-1.png"
+              alt="flower"
+              class="abs img3"
+            />
+          </div>
+          <div class="img">
+            <img
+              data-aos="zoom-in"
+              src="/flower-1.png"
+              alt="flower"
+              class="abs img4"
+            />
+          </div>
+          <div
+            class="p-4 rounded-3 mx-3 shadow-sm"
+            style="background-color: #f8f8f899"
+          >
+            <h2 class="card-title font-2" data-aos="flip-right">Kirim Kartu Ucapan</h2>
+            <p data-aos="flip-right">
+              
+            </p>
+          </div>
+        </div>
       <section>
       </section>
       <section id="presensi">
