@@ -130,9 +130,7 @@
             <div class="mt-5">
               <p class="" data-aos="fade-right">
                 Turut mengundang Bapak/Ibu/Saudara/i
-                <strong style="text-transform: uppercase">{{
-                  form.nama
-                }}</strong>
+                <strong style="text-transform: uppercase">{{ form.nama }}</strong>
                 pada acara :
               </p>
               <h1 class="cal mt-3 mb-1" data-aos="fade-right">Resepsi</h1>
@@ -153,35 +151,35 @@
           </div>
         </div>
       </section>
-      <div class="my-5 dalil-container">
-        <div class="img">
-          <img data-aos="zoom-in" data-aos-delay="300" src="/flower-1.png" alt="flower" class="abs img3" />
-        </div>
-        <div class="img">
-          <img data-aos="zoom-in" src="/flower-1.png" alt="flower" class="abs img4" />
-        </div>
-        <div class="p-4 rounded-3 mx-3 shadow-sm" style="background-color: #f8f8f899">
-          <h2 class="card-title font-2 text-center" data-aos="flip-right">Kirim Kartu Ucapan</h2>
-          <p data-aos="flip-right">
-          <div class="mb-3">
-            <label for="text" class="form-label">Name</label>
-            <input type="email" class="form-control" id="text">
-          </div>
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Asal</label>
-            <input type="email" class="form-control" id="text">
-          </div>
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
-          </p>
-        </div>
-        <div class="text-center m-4">
-          <button type="submit" class="btn btn-outline-secondary">Kirim</button>
-        </div>
-      </div>
       <section>
+        <div class="my-5 dalil-container">
+          <div class="img">
+            <img data-aos="zoom-in" data-aos-delay="300" src="/flower-1.png" alt="flower" class="abs img3" />
+          </div>
+          <div class="img">
+            <img data-aos="zoom-in" src="/flower-1.png" alt="flower" class="abs img4" />
+          </div>
+          <div class="p-4 rounded-3 mx-3 shadow-sm" style="background-color: #f8f8f899">
+            <h2 class="card-title font-2 text-center" data-aos="flip-right">Kirim Kartu Ucapan</h2>
+            <p data-aos="flip-right">
+            <div class="mb-3">
+              <label for="text" class="form-label">Name</label>
+              <input type="email" class="form-control" id="text">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Asal</label>
+              <input type="email" class="form-control" id="text">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            </p>
+          </div>
+          <div class="text-center m-4">
+            <button type="submit" class="btn btn-outline-secondary">Kirim</button>
+          </div>
+        </div>
       </section>
       <section id="presensi">
         <!-- Button trigger modal -->
@@ -192,7 +190,6 @@
             Konfirmasi Kehadiran
           </button>
         </div>
-
         <section id="countdown" class="text-center">
           <div class="p-4 rounded-3 shadow-sm m-3 text-center" style="background-color: #f8f8f899">
             <h1 class="cal" data-aos="flip-down">Menuju Acara</h1>
