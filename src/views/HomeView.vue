@@ -318,7 +318,7 @@
                   <h5 class="card-title cal">Via Dompet Digital</h5>
                   <img src="/gopay.jpg" class="card-img-top" alt="..." />
                   <input value="087725672087" type="text" class="form-control" style="outline: none; border:none"
-                    id="myInput" disabled>
+                    id="myInput" >
                   <button onclick="myFunction()"><i class="bi bi-clipboard"></i></button>
                   <p>Ariesty Rizky Aliefia
                   </p>
