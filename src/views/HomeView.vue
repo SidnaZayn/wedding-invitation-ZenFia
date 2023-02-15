@@ -219,11 +219,17 @@
           </div>
           <div
             class="p-4 rounded-3 mx-3 shadow-sm"
-            style="background-color: #f8f8f899"
-          >
+            style="background-color: #f8f8f899">
             <h2 class="card-title font-2" data-aos="flip-right">Kirim Kartu Ucapan</h2>
             <p data-aos="flip-right">
-              
+             <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div> 
             </p>
           </div>
         </div>
