@@ -159,25 +159,25 @@
           <div class="img">
             <img data-aos="zoom-in" src="/flower-1.png" alt="flower" class="abs img4" />
           </div>
-          <div class="p-4 rounded-3 mx-3 shadow-sm" style="background-color: #f8f8f899">
+          <div data-aos="flip-left" class="p-4 rounded-3 mx-3 shadow-sm" style="background-color: #f8f8f899">
             <h2 class="card-title font-2 text-center" data-aos="flip-right">Kirim Kartu Ucapan</h2>
             <p data-aos="flip-right">
             <div class="mb-3">
               <label for="text" class="form-label">Name</label>
-              <input type="email" class="form-control" id="text">
+              <input type="text" v-model="form.nama" class="form-control" id="text">
             </div>
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label">Asal</label>
-              <input type="email" class="form-control" id="text">
+              <input type="text" v-model="form.asal" class="form-control" id="text">
             </div>
             <div class="mb-3">
               <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <textarea class="form-control" rows="3" v-model="form.pesan"></textarea>
             </div>
             </p>
           </div>
           <div class="text-center m-4">
-            <button type="submit" class="btn btn-outline-secondary">Kirim</button>
+            <button @click="submitUcapan()" class="btn btn-outline-secondary">Kirim</button>
           </div>
         </div>
       </section>
@@ -471,7 +471,15 @@ let form = ref({
   asal: "",
   sebagai: "",
   isHadir: "",
+  pesan: "",
 });
+
+const submitUcapan = async () => {
+  const data = form.value
+  const res = await axios.post('ucapan?nama=' + data.nama + '&asal=' + data.asal + '&pesan=' + data.pesan);
+  alert(res.data);
+  form.value.pesan = "";
+};
 
 const kehadiran = async (value) => {
   const getTamu = await axios.post(
