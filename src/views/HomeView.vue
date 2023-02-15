@@ -317,14 +317,15 @@
                 <div class="card-body">
                   <h5 class="card-title cal">Via Dompet Digital</h5>
                   <img src="/gopay.jpg" class="card-img-top" alt="..." />
-                  <input value="087725672087" type="text" class="form-control card-text" style="outline: none; border:none"
-                    id="myInput" disabled>
-                  <button onclick="myFunction()"><i class="bi bi-clipboard"></i></button>
-                  <p>an.Ariesty Rizky Aliefia</p>
+                  <p class="card-text">
+                    081226158294 an. <br />
+                    Sidna Muhammad Zen
+                  </p>
                   <img src="/ovo.jpg" class="card-img-top" alt="..." />
-                  <input class="card-text" type="text" value=" 087725872057" id="myInput"><button
-                    onclick="myFunction()"><i class="bi bi-clipboard"></i></button>
-                  <p>an.Ariesty Rizky Aliefia</p>
+                  <p class="card-text">
+                    087725872057 an. <br />
+                    Sidna Muhammad Zen
+                  </p>
                 </div>
               </div>
             </div>
@@ -463,20 +464,6 @@ onMounted(async () => {
   form.value.sebagai = tamu[3];
   form.value.isHadir = tamu[4];
 });
-function myFunction() {
-  // Get the text field
-  var copyText = document.getElementById("myInput");
-
-  // Select the text field
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); // For mobile devices
-
-  // Copy the text inside the text field
-  navigator.clipboard.writeText(copyText.value);
-
-  // Alert the copied text
-  alert("Copied the text: " + copyText.value);
-}
 
 //rsvp
 let form = ref({
