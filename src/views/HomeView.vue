@@ -223,13 +223,17 @@
             <h2 class="card-title font-2" data-aos="flip-right">Kirim Kartu Ucapan</h2>
             <p data-aos="flip-right">
              <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-</div> 
+                <label for="text" class="form-label">Name</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nama">
+             </div>
+             <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Asal</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Asal">
+             </div>
+            <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div> 
             </p>
           </div>
         </div>
