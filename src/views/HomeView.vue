@@ -317,9 +317,10 @@
                 <div class="card-body">
                   <h5 class="card-title cal">Via Dompet Digital</h5>
                   <img src="/gopay.jpg" class="card-img-top" alt="..." />
-                  <p class="card-text">
-                    081226158294 an. <br />
-                    Sidna Muhammad Zen
+                  <input value="087725672087" type="text" class="form-control" style="outline: none; border:none"
+                    id="myInput" disabled>
+                  <button onclick="myFunction()"><i class="bi bi-clipboard"></i></button>
+                  <p>Ariesty Rizky Aliefia
                   </p>
                   <img src="/ovo.jpg" class="card-img-top" alt="..." />
                   <p class="card-text">
@@ -479,7 +480,24 @@ const kehadiran = async (value) => {
   );
   form.value.isHadir = value;
 };
+function myFunction() {
+  let textToCopy = document.getElementById("myInput").textContent;
 
+  console.log(textToCopy);
+  // text area method
+  let textArea = document.createElement("textarea");
+  textArea.value = textToCopy;
+  textArea.style.position = "fixed";
+  textArea.style.left = "-999999px";
+  textArea.style.top = "-999999px";
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  return new Promise((res, rej) => {
+    document.execCommand("copy") ? res() : rej();
+    textArea.remove();
+  });
+};
 //qrcode
 let qrcode = ref(
   "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="
