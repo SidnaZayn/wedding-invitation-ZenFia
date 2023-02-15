@@ -177,9 +177,7 @@
           </div>
           </p>
         </div>
-        <div class="text-center m-4">
-        <button type="submit" class="btn btn-outline-secondary">Kirim</button>
-      </div>
+        <button type="submit" class="btn btn-outline-secondary text-center m-4">Kirim</button>
       </div>
       <section>
       </section>
