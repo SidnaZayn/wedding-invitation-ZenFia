@@ -481,7 +481,7 @@ const kehadiran = async (value) => {
   form.value.isHadir = value;
 };
 function myFunction() {
-  let textToCopy = document.getElementById("myInput").textContent;
+  let textToCopy = document.getElementById("myInput").value;
 
   console.log(textToCopy);
   // text area method
@@ -496,7 +496,7 @@ function myFunction() {
   return new Promise((res, rej) => {
     document.execCommand("copy") ? res() : rej();
     textArea.remove();
-  });
+  });
 };
 //qrcode
 let qrcode = ref(
