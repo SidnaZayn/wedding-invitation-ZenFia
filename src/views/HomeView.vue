@@ -88,7 +88,7 @@
               </div>
               <div class="col-md-8">
                 <div class="card-body text-center p-0 mt-4 mb-2">
-                  <p>The Groom</p>
+                  <h1 class="font -2">The Groom</h1>
                   <h1 class="card-title cal">Sidna Muhammad Zen</h1>
                   <small>Putra Kedua Dari</small>
                   <h5 class="card-text font-2">
@@ -110,7 +110,7 @@
             <div class="row g-0">
               <div class="col-md-8">
                 <div class="card-body text-center p-0 mt-4 mb-2">
-                  <p>The Bride</p>
+                  <h1 class="font -2">The Bride</h1>
                   <h1 class="card-title cal">Ariesty Rizky Aliefia</h1>
                   <small>Putri Ketiga dari </small>
                   <h5 class="card-text font-2">
@@ -290,7 +290,7 @@
                       @click.prevent="kehadiran('TIDAK HADIR')"
                       class="btn btn btn-outline-secondary"
                     >
-                      😔 Saya Tidak Hadir
+                      Saya Tidak Hadir
                     </button>
                     &nbsp;&nbsp;
                     <button
@@ -298,13 +298,13 @@
                       @click.prevent="kehadiran('AKAN HADIR')"
                       class="btn btn btn-outline-secondary"
                     >
-                      🥳 Saya Hadir
+                       Saya Hadir
                     </button>
                   </div>
                   <div v-if="form.isHadir === 'AKAN HADIR'">
                     <div class="text-center" id="qrcode-download">
                       <h5>
-                        Terima Kasih {{ form.nama }} sudah mau hadir.✨✨✨
+                        Terima Kasih {{ form.nama }} sudah mau hadir.
                         <br />
                         Ditunggu yaaa
                       </h5>
@@ -324,17 +324,15 @@
                     </div>
                   </div>
                   <div v-if="form.isHadir === 'TIDAK HADIR'">
-                    <h3>yaaahhh sayang banget kamu ngga hadir 😢</h3>
-                    <p>
-                      Terimakasih Konfirmasi nya. Mohon do'a restu nya yaaa 🙏
-                    </p>
+                    <h3>
+                      Atas Terimakasih Konfirmasi nya. Mohon do'a restu nya 
+                    </h3>
                     <button class="btn btn-secondary" data-bs-dismiss="modal">
                       Okeyyy
                     </button>
                   </div>
                   <div v-if="form.isHadir === 'SUDAH HADIR'">
-                    <h3>Terima Kasih Sudah Hadir</h3>
-                    <p>Mohon do'a restu nya yaaa 🙏</p>
+                    <h3>Kami Tunggu Kehadiran anda</h3>
                     <button class="btn btn-secondary" data-bs-dismiss="modal">
                       Okeyyy
                     </button>
