@@ -88,7 +88,7 @@
               </div>
               <div class="col-md-8">
                 <div class="card-body text-center p-0 mt-4 mb-2">
-                  <p>🤴</p>
+                  <p>The Groom</p>
                   <h1 class="card-title cal">Sidna Muhammad Zen</h1>
                   <small>Putra Kedua Dari</small>
                   <h5 class="card-text font-2">
@@ -110,7 +110,7 @@
             <div class="row g-0">
               <div class="col-md-8">
                 <div class="card-body text-center p-0 mt-4 mb-2">
-                  <p>👸</p>
+                  <p>The Bride</p>
                   <h1 class="card-title cal">Ariesty Rizky Aliefia</h1>
                   <small>Putri Ketiga dari </small>
                   <h5 class="card-text font-2">
