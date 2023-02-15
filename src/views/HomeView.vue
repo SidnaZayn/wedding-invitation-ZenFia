@@ -1,10 +1,6 @@
 <template>
   <div class="app">
     <div v-if="isOpen == true">
-      <!-- I Love Youuuuuuu -->
-      <div>
-        <h1>I love Ariesty Rizky Aliefia</h1>
-      </div>
       <section id="music">
         <div v-if="myaudio">
           <audio loop autoplay>
@@ -94,7 +90,7 @@
                 <div class="card-body text-center p-0 mt-4 mb-2">
                   <p>🤴</p>
                   <h1 class="card-title cal">Sidna Muhammad Zen</h1>
-                  <small>Putra Dari</small>
+                  <small>Putra Kedua Dari</small>
                   <h5 class="card-text font-2">
                     Bpk. Akhmad Faozi & Ibu. Heriyanti
                   </h5>
@@ -116,7 +112,7 @@
                 <div class="card-body text-center p-0 mt-4 mb-2">
                   <p>👸</p>
                   <h1 class="card-title cal">Ariesty Rizky Aliefia</h1>
-                  <small>Putri Dari</small>
+                  <small>Putri Ketiga dari </small>
                   <h5 class="card-text font-2">
                     Bpk. Imam Santoso<span style="font-size: small">(alm)</span>
                     & Ibu. Widiyanti
