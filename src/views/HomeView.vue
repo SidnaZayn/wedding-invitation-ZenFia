@@ -326,8 +326,8 @@
                     087725872057 an. <br />
                     Ariesty Rizky Aliefia
                   </p>
-                  <input type="text" value=" 087725872057 an.Ariesty Rizky Aliefia" id="myInput">
-                  <button onclick="myFunction()">Copy</button>
+                  <input type="text" value=" 087725872057" id="myInput"><button onclick="myFunction()"><i class="bi bi-clipboard"></i></button>
+                  <p>an.Ariesty Rizky Aliefia</p>
                 </div>
               </div>
             </div>
