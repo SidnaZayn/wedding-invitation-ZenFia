@@ -160,8 +160,8 @@
         <div class="img">
           <img data-aos="zoom-in" src="/flower-1.png" alt="flower" class="abs img4" />
         </div>
-        <div class="p-4 rounded-3 mx-3 shadow-sm text-center" style="background-color: #f8f8f899">
-          <h2 class="card-title font-2" data-aos="flip-right">Kirim Kartu Ucapan</h2>
+        <div class="p-4 rounded-3 mx-3 shadow-sm" style="background-color: #f8f8f899">
+          <h2 class="card-title font-2 text-center" data-aos="flip-right">Kirim Kartu Ucapan</h2>
           <p data-aos="flip-right">
           <div class="mb-3">
             <label for="text" class="form-label">Name</label>
@@ -177,7 +177,9 @@
           </div>
           </p>
         </div>
-        <button type="submit" class="btn btn-outline-secondary text-center m-4">Kirim</button>
+        <div class="text-center m-4">
+          <button type="submit" class="btn btn-outline-secondary">Kirim</button>
+        </div>
       </div>
       <section>
       </section>
