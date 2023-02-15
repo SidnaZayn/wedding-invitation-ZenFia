@@ -12,19 +12,14 @@
         <div class="container containers mx-auto abs">
           <div class="text-center">
             <div data-aos="fade-down" data-aos-duration="1000">
-              <div
-                class="p-4 rounded-3 mt-2 mx-3 shadow"
-                style="background-color: #f8f8f8d7"
-              >
+              <div class="p-4 rounded-3 mt-2 mx-3 shadow" style="background-color: #f8f8f8d7">
                 <h5 class="card-title cal fs-2">The Wedding of</h5>
                 <h1 class="font-2">Sidna & Ariesty</h1>
-                <small class="card-text"
-                  >Kepada Bapak/Ibu/Saudara/i
+                <small class="card-text">Kepada Bapak/Ibu/Saudara/i
                   <span style="text-transform: uppercase; font-weight: bold">{{
                     form.nama
                   }}</span>
-                  di tempat</small
-                >
+                  di tempat</small>
                 <p class="card-text">
                   Izinkan kami mengundang Anda dalam acara kami
                 </p>
@@ -39,26 +34,12 @@
       <section id="dalil">
         <div class="text-center my-5 dalil-container">
           <div class="img">
-            <img
-              data-aos="zoom-in"
-              data-aos-delay="300"
-              src="/flower-1.png"
-              alt="flower"
-              class="abs img3"
-            />
+            <img data-aos="zoom-in" data-aos-delay="300" src="/flower-1.png" alt="flower" class="abs img3" />
           </div>
           <div class="img">
-            <img
-              data-aos="zoom-in"
-              src="/flower-1.png"
-              alt="flower"
-              class="abs img4"
-            />
+            <img data-aos="zoom-in" src="/flower-1.png" alt="flower" class="abs img4" />
           </div>
-          <div
-            class="p-4 rounded-3 mx-3 shadow-sm"
-            style="background-color: #f8f8f899"
-          >
+          <div class="p-4 rounded-3 mx-3 shadow-sm" style="background-color: #f8f8f899">
             <h2 class="card-title font-2" data-aos="flip-right">Ar-Rum : 21</h2>
             <p class="mt-3 arabic" data-aos="flip-right">
               وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا
@@ -77,11 +58,7 @@
       </section>
       <section id="we">
         <div class="container">
-          <div
-            class="card mb-3 mx-5"
-            data-aos="flip-right"
-            data-aos-duration="1500"
-          >
+          <div class="card mb-3 mx-5" data-aos="flip-right" data-aos-duration="1500">
             <div class="row g-0">
               <div class="col-md-4">
                 <img src="/sidna.jpg" class="img-fluid rounded" alt="..." />
@@ -102,11 +79,7 @@
               </div>
             </div>
           </div>
-          <div
-            class="card mb-3 mx-5"
-            data-aos="flip-right"
-            data-aos-duration="1500"
-          >
+          <div class="card mb-3 mx-5" data-aos="flip-right" data-aos-duration="1500">
             <div class="row g-0">
               <div class="col-md-8">
                 <div class="card-body text-center p-0 mt-4 mb-2">
@@ -132,25 +105,10 @@
       <section id="schedule">
         <div class="text-center">
           <div class="img">
-            <img
-              data-aos="zoom-in"
-              data-aos-delay="300"
-              src="/flower-3-copy.png"
-              alt="flower"
-              class="abs img7"
-            />
-            <img
-              data-aos="zoom-in"
-              data-aos-delay="300"
-              src="/flower-3.png"
-              alt="flower"
-              class="abs img6"
-            />
+            <img data-aos="zoom-in" data-aos-delay="300" src="/flower-3-copy.png" alt="flower" class="abs img7" />
+            <img data-aos="zoom-in" data-aos-delay="300" src="/flower-3.png" alt="flower" class="abs img6" />
           </div>
-          <div
-            class="p-4 rounded-3 shadow-sm mt-2 mx-3"
-            style="background-color: #f8f8f899"
-          >
+          <div class="p-4 rounded-3 shadow-sm mt-2 mx-3" style="background-color: #f8f8f899">
             <div>
               <h3 class="mt-3 mb-0 cal" data-aos="fade-right">Akad</h3>
               <div>
@@ -188,112 +146,75 @@
                 <i class="bi bi-geo-alt"></i>Jl. Jl. Sawo gang 1 RT.04/RW.02,
                 Kel. Procot, Kec. Slawi, Kab. Tegal
               </p>
-              <a
-                class="btn btn-secondary mt-3"
-                href="https://goo.gl/maps/X66SRLbKLTVc3bQx5"
-                target="_blank"
-              >
+              <a class="btn btn-secondary mt-3" href="https://goo.gl/maps/X66SRLbKLTVc3bQx5" target="_blank">
                 <i class="bi bi-geo-fill"></i> lihat lokasi di maps
               </a>
             </div>
           </div>
         </div>
       </section>
-                      <div class="text-center my-5 dalil-container">
-          <div class="img">
-            <img
-              data-aos="zoom-in"
-              data-aos-delay="300"
-              src="/flower-1.png"
-              alt="flower"
-              class="abs img3"
-            />
+      <div class="my-5 dalil-container">
+        <div class="img">
+          <img data-aos="zoom-in" data-aos-delay="300" src="/flower-1.png" alt="flower" class="abs img3" />
+        </div>
+        <div class="img">
+          <img data-aos="zoom-in" src="/flower-1.png" alt="flower" class="abs img4" />
+        </div>
+        <div class="p-4 rounded-3 mx-3 shadow-sm" style="background-color: #f8f8f899">
+          <h2 class="card-title font-2" data-aos="flip-right">Kirim Kartu Ucapan</h2>
+          <p data-aos="flip-right">
+          <div class="mb-3">
+            <label for="text" class="form-label">Name</label>
+            <input type="email" class="form-control" id="text">
           </div>
-          <div class="img">
-            <img
-              data-aos="zoom-in"
-              src="/flower-1.png"
-              alt="flower"
-              class="abs img4"
-            />
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Asal</label>
+            <input type="email" class="form-control" id="text">
           </div>
-          <div
-            class="p-4 rounded-3 mx-3 shadow-sm"
-            style="background-color: #f8f8f899">
-            <h2 class="card-title font-2" data-aos="flip-right">Kirim Kartu Ucapan</h2>
-            <p data-aos="flip-right">
-             <div class="mb-3">
-                <label for="text" class="form-label">Name</label>
-                <input type="email" class="form-control" id="text">
-             </div>
-             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Asal</label>
-                <input type="email" class="form-control" id="text">
-             </div>
-            <div class="mb-3">
+          <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div> 
-            </p>
           </div>
+          </p>
         </div>
+      </div>
       <section>
       </section>
       <section id="presensi">
         <!-- Button trigger modal -->
         <div class="text-center m-4">
-          <button
-            type="button"
-            data-aos="zoom-in"
-            class="btn btn-outline-secondary"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-          >
+          <button type="button" data-aos="zoom-in" class="btn btn-outline-secondary" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
             <i class="bi bi-file-text"></i> <br />
             Konfirmasi Kehadiran
           </button>
         </div>
 
         <section id="countdown" class="text-center">
-          <div
-            class="p-4 rounded-3 shadow-sm m-3 text-center"
-            style="background-color: #f8f8f899"
-          >
+          <div class="p-4 rounded-3 shadow-sm m-3 text-center" style="background-color: #f8f8f899">
             <h1 class="cal" data-aos="flip-down">Menuju Acara</h1>
             <hr class="hr-1 mb-4" data-aos="zoom-in" />
             <div class="row">
               <div class="col-3" data-aos="flip-right">
-                <div
-                  class="p-3 rounded-3 shadow-sm mb-2"
-                  style="background-color: #fce592"
-                >
+                <div class="p-3 rounded-3 shadow-sm mb-2" style="background-color: #fce592">
                   <h1>{{ menuju_halal.days }}</h1>
                 </div>
                 <h5>Hari</h5>
               </div>
               <div class="col-3" data-aos="flip-right" data-aos-delay="200">
-                <div
-                  class="p-3 rounded-3 shadow-sm mb-2"
-                  style="background-color: #fce592"
-                >
+                <div class="p-3 rounded-3 shadow-sm mb-2" style="background-color: #fce592">
                   <h1>{{ menuju_halal.hours }}</h1>
                 </div>
                 <h5>Jam</h5>
               </div>
               <div class="col-3" data-aos="flip-right" data-aos-delay="300">
-                <div
-                  class="p-3 rounded-3 shadow-sm mb-2"
-                  style="background-color: #fce592"
-                >
+                <div class="p-3 rounded-3 shadow-sm mb-2" style="background-color: #fce592">
                   <h1>{{ menuju_halal.minutes }}</h1>
                 </div>
                 <h5>Menit</h5>
               </div>
               <div class="col-3" data-aos="flip-right" data-aos-delay="400">
-                <div
-                  class="p-3 rounded-3 shadow-sm mb-2"
-                  style="background-color: #fce592"
-                >
+                <div class="p-3 rounded-3 shadow-sm mb-2" style="background-color: #fce592">
                   <h1>{{ menuju_halal.seconds }}</h1>
                 </div>
                 <h5>Detik</h5>
@@ -302,43 +223,26 @@
           </div>
         </section>
         <!-- Modal -->
-        <div
-          class="modal fade"
-          id="exampleModal"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">
                   apakah anda akan hadir?
                 </h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body p-2">
                 <div class="text-center m-3">
                   <div v-if="form.isHadir === 'BELUM KONFIRMASI'">
-                    <button
-                      type="button"
-                      @click.prevent="kehadiran('TIDAK HADIR')"
-                      class="btn btn btn-outline-secondary"
-                    >
+                    <button type="button" @click.prevent="kehadiran('TIDAK HADIR')"
+                      class="btn btn btn-outline-secondary">
                       Saya Tidak Hadir
                     </button>
                     &nbsp;&nbsp;
-                    <button
-                      type="button"
-                      @click.prevent="kehadiran('AKAN HADIR')"
-                      class="btn btn btn-outline-secondary"
-                    >
-                       Saya Hadir
+                    <button type="button" @click.prevent="kehadiran('AKAN HADIR')"
+                      class="btn btn btn-outline-secondary">
+                      Saya Hadir
                     </button>
                   </div>
                   <div v-if="form.isHadir === 'AKAN HADIR'">
@@ -346,11 +250,7 @@
                       <h5>
                         Terima Kasih {{ form.nama }} Ditunggu Kehadiranny.
                       </h5>
-                      <img
-                        :src="qrcode + route.params.id"
-                        alt="qrnama"
-                        class="my-3"
-                      />
+                      <img :src="qrcode + route.params.id" alt="qrnama" class="my-3" />
                       <br />
                       <small>
                         Tunjukan Qrcode ini ketika anda akan chek in ke acara kami, untuk Konfirmasi kehadiran
@@ -364,7 +264,7 @@
                   <div v-if="form.isHadir === 'TIDAK HADIR'">
                     <h3>Terimakasih sudah Konfirmasi</h3>
                     <p>
-                      Mohon do'a restu nya yaaa 
+                      Mohon do'a restu nya yaaa
                     </p>
                     <button class="btn btn-secondary" data-bs-dismiss="modal">
                       Okeyyy
@@ -384,29 +284,15 @@
         </div>
       </section>
       <section id="amplopDigital">
-        <div
-          class="img text-center p-4"
-          style="background: url(/bg-flower.png); background-size: 50%"
-        >
-          <img
-            data-aos="zoom-in"
-            data-aos-duration="200"
-            src="/123.jpg"
-            class="card-img shadow img2"
-          />
+        <div class="img text-center p-4" style="background: url(/bg-flower.png); background-size: 50%">
+          <img data-aos="zoom-in" data-aos-duration="200" src="/123.jpg" class="card-img shadow img2" />
         </div>
         <div class="text-center">
-          <div
-            class="p-4 rounded-3 mt-2 mx-3 shadow-sm"
-            data-aos="flip-down"
-            style="background-color: #f8f8f899"
-          >
+          <div class="p-4 rounded-3 mt-2 mx-3 shadow-sm" data-aos="flip-down" style="background-color: #f8f8f899">
             <h2 class="card-title cal">Amplop Digital</h2>
-            <small class="card-text mt-3"
-              >Doa restu anda merupakan karunia yang sangat berarti bagi kami
+            <small class="card-text mt-3">Doa restu anda merupakan karunia yang sangat berarti bagi kami
               dan jika memberi adalah ungkapan tanda terima kasih anda, anda
-              dapat memberi kado secara cashless</small
-            >
+              dapat memberi kado secara cashless</small>
           </div>
           <div class="row mt-2 p-3">
             <div class="col" data-aos="flip-right">
@@ -447,13 +333,8 @@
         </div>
       </section>
     </div>
-    <div
-      v-show="isOpen"
-      id="carouselExampleSlidesOnly"
-      class="carousel slide"
-      data-bs-ride="carousel"
-      data-bs-interval="1500"
-    >
+    <div v-show="isOpen" id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel"
+      data-bs-interval="1500">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="/kita.jpg" class="d-block w-100" alt="..." />
@@ -476,25 +357,10 @@
       <section id="Story">
         <div class="text-center">
           <div class="img">
-            <img
-              data-aos="zoom-in"
-              data-aos-delay="300"
-              src="/flower-2.png"
-              alt="flower"
-              class="abs img6"
-            />
-            <img
-              data-aos="zoom-in"
-              data-aos-delay="300"
-              src="/flower-2-copy.png"
-              alt="flower"
-              class="abs img7"
-            />
+            <img data-aos="zoom-in" data-aos-delay="300" src="/flower-2.png" alt="flower" class="abs img6" />
+            <img data-aos="zoom-in" data-aos-delay="300" src="/flower-2-copy.png" alt="flower" class="abs img7" />
           </div>
-          <div
-            class="p-4 rounded-3 m-4 shadow-sm"
-            style="background-color: #f8f8f899"
-          >
+          <div class="p-4 rounded-3 m-4 shadow-sm" style="background-color: #f8f8f899">
             <h1 data-aos="fade-down" class="card-title cal">Our Story</h1>
             <hr class="hr-1" />
             <div data-aos="fade-right">
@@ -531,11 +397,7 @@
         <div class="img p-3 text-center" data-aos="zoom-in">
           <img src="/akhir.jpg" class="card-img img5 shadow" />
         </div>
-        <div
-          class="text-center mt-2 mb-4 mx-3"
-          data-aos="fade-up"
-          style="height: 7vh"
-        >
+        <div class="text-center mt-2 mb-4 mx-3" data-aos="fade-up" style="height: 7vh">
           <p class="card-text">
             Kesan yang mendalam akan terukir dihati kami, serta diiringi ucapan
             terima kasih yang tulus, kepada Bapak/Ibu/Saudara/i berkenan hadir
@@ -553,12 +415,8 @@
           <div class="col-12 bg-success">
             <div class="p-3 text-center text-light">
               Online Invitation by
-              <a
-                href="https://www.instagram.com/dezayn.studio/"
-                target="_blank"
-                style="color: white; text-decoration: none"
-                >@dezayn.studio</a
-              >
+              <a href="https://www.instagram.com/dezayn.studio/" target="_blank"
+                style="color: white; text-decoration: none">@dezayn.studio</a>
             </div>
           </div>
         </div>
@@ -571,42 +429,18 @@
     </div>
     <div v-if="isOpen == false">
       <section id="to">
-        <div
-          data-aos="zoom-in"
-          class="p-4 rounded-3 shadow-sm m-3 text-center"
-          style="background-color: #f8f8f899"
-        >
+        <div data-aos="zoom-in" class="p-4 rounded-3 shadow-sm m-3 text-center" style="background-color: #f8f8f899">
           <h1 class="font-2 mb-5" style="color: #65741f">Wedding Invitation</h1>
           <div class="img">
-            <img
-              data-aos="zoom-in"
-              data-aos-delay="300"
-              src="/depan.png"
-              alt="logo"
-              class="img-to"
-            />
+            <img data-aos="zoom-in" data-aos-delay="300" src="/depan.png" alt="logo" class="img-to" />
           </div>
-          <h5
-            data-aos="zoom-in"
-            data-aos-delay="500"
-            style="color: #1b1b1b"
-            class="mt-5"
-          >
+          <h5 data-aos="zoom-in" data-aos-delay="500" style="color: #1b1b1b" class="mt-5">
             <i>Dear,</i>
           </h5>
-          <h3
-            style="text-transform: uppercase"
-            data-aos="zoom-in"
-            data-aos-delay="600"
-          >
+          <h3 style="text-transform: uppercase" data-aos="zoom-in" data-aos-delay="600">
             {{ form.nama }}
           </h3>
-          <button
-            @click="openInvite()"
-            class="btn btn-outline-secondary mt-4"
-            data-aos="zoom-in"
-            data-aos-delay="700"
-          >
+          <button @click="openInvite()" class="btn btn-outline-secondary mt-4" data-aos="zoom-in" data-aos-delay="700">
             Buka Undangan
           </button>
         </div>
