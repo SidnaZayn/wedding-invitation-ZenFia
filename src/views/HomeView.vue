@@ -224,11 +224,11 @@
             <p data-aos="flip-right">
              <div class="mb-3">
                 <label for="text" class="form-label">Name</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nama">
+                <input type="email" class="form-control" id="text">
              </div>
              <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Asal</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Asal">
+                <input type="email" class="form-control" id="text">
              </div>
             <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
