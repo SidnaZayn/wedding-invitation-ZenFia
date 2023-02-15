@@ -300,13 +300,21 @@
                 <div class="card-body">
                   <h5 class="card-title cal">Via Bank</h5>
                   <img src="/mandiri.jpg" class="card-img-top" alt="..." />
+                  <div class="input-group">
+                    <input value="1390026051932" type="text" class="form-control" style="outline: none; border:none"
+                      id="myInput" disabled>
+                    <span style="cursor:pointer; outline: none; border:none;" class="input-group-text" @click="myFunction()"><i class="bi bi-clipboard"></i></span>
+                  </div>
                   <p class="card-text">
-                    1390026051932 an. <br />
                     Ariesty Rizky Aliefia (Mandiri)
                   </p>
                   <img src="/bri.jpg" class="card-img-top" alt="..." />
+                  <div class="input-group">
+                    <input value="0545 01016247509" type="text" class="form-control" style="outline: none; border:none"
+                      id="myInput" disabled>
+                    <span style="cursor:pointer; outline: none; border:none;" class="input-group-text" @click="myFunction()"><i class="bi bi-clipboard"></i></span>
+                  </div>
                   <p class="card-text">
-                    0545 01016247509 an. <br />
                     Sidna Muhammad Zen (BRI)
                   </p>
                 </div>
@@ -317,14 +325,20 @@
                 <div class="card-body">
                   <h5 class="card-title cal">Via Dompet Digital</h5>
                   <img src="/gopay.jpg" class="card-img-top" alt="..." />
-                  <input value="087725672087" type="text" class="form-control" style="outline: none; border:none"
-                    id="myInput" >
-                  <button onclick="myFunction()"><i class="bi bi-clipboard"></i></button>
+                  <div class="input-group">
+                    <input value="087725672057" type="text" class="form-control" style="outline: none; border:none"
+                      id="myInput" disabled>
+                    <span style="cursor:pointer; outline: none; border:none;" class="input-group-text" @click="myFunction()"><i class="bi bi-clipboard"></i></span>
+                  </div>
                   <p>Ariesty Rizky Aliefia
                   </p>
                   <img src="/ovo.jpg" class="card-img-top" alt="..." />
+                  <div class="input-group">
+                    <input value="081226158294" type="text" class="form-control" style="outline: none; border:none"
+                      id="myInput" disabled>
+                    <span style="cursor:pointer; outline: none; border:none;" class="input-group-text" @click="myFunction()"><i class="bi bi-clipboard"></i></span>
+                  </div>
                   <p class="card-text">
-                    087725872057 an. <br />
                     Sidna Muhammad Zen
                   </p>
                 </div>
@@ -506,6 +520,7 @@ function myFunction() {
     textArea.remove();
   });
 };
+
 //qrcode
 let qrcode = ref(
   "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="
