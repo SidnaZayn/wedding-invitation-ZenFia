@@ -303,7 +303,7 @@
                   <div class="input-group">
                     <input value="1390026051932" type="text" class="form-control" style="outline: none; border:none"
                       id="myInput" disabled>
-                    <span style="cursor:pointer; outline: none; border:none;" class="input-group-text" @click="myFunction()"><i class="bi bi-clipboard"></i></span>
+                    <span style="cursor:pointer; outline: none; border:none;" class="input-group-text" @click="myFunction('myInput')"><i class="bi bi-clipboard"></i></span>
                   </div>
                   <p class="card-text">
                     Ariesty Rizky Aliefia (Mandiri)
@@ -311,8 +311,8 @@
                   <img src="/bri.jpg" class="card-img-top" alt="..." />
                   <div class="input-group">
                     <input value="0545 01016247509" type="text" class="form-control" style="outline: none; border:none"
-                      id="myInput" disabled>
-                    <span style="cursor:pointer; outline: none; border:none;" class="input-group-text" @click="myFunction()"><i class="bi bi-clipboard"></i></span>
+                      id="myInput1" disabled>
+                    <span style="cursor:pointer; outline: none; border:none;" class="input-group-text" @click="myFunction('myInput1')"><i class="bi bi-clipboard"></i></span>
                   </div>
                   <p class="card-text">
                     Sidna Muhammad Zen (BRI)
@@ -327,16 +327,16 @@
                   <img src="/gopay.jpg" class="card-img-top" alt="..." />
                   <div class="input-group">
                     <input value="087725672057" type="text" class="form-control" style="outline: none; border:none"
-                      id="myInput" disabled>
-                    <span style="cursor:pointer; outline: none; border:none;" class="input-group-text" @click="myFunction()"><i class="bi bi-clipboard"></i></span>
+                      id="myInput2" disabled>
+                    <span style="cursor:pointer; outline: none; border:none;" class="input-group-text" @click="myFunction('myInput2')"><i class="bi bi-clipboard"></i></span>
                   </div>
                   <p>Ariesty Rizky Aliefia
                   </p>
                   <img src="/ovo.jpg" class="card-img-top" alt="..." />
                   <div class="input-group">
                     <input value="081226158294" type="text" class="form-control" style="outline: none; border:none"
-                      id="myInput" disabled>
-                    <span style="cursor:pointer; outline: none; border:none;" class="input-group-text" @click="myFunction()"><i class="bi bi-clipboard"></i></span>
+                      id="myInput3" disabled>
+                    <span style="cursor:pointer; outline: none; border:none;" class="input-group-text" @click="myFunction('myInput3')"><i class="bi bi-clipboard"></i></span>
                   </div>
                   <p class="card-text">
                     Sidna Muhammad Zen
@@ -502,8 +502,8 @@ const kehadiran = async (value) => {
   );
   form.value.isHadir = value;
 };
-function myFunction() {
-  let textToCopy = document.getElementById("myInput").value;
+function myFunction(text) {
+  let textToCopy = document.getElementById(text).value;
 
   console.log(textToCopy);
   // text area method
