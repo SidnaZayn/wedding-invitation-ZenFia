@@ -304,9 +304,7 @@
                   <div v-if="form.isHadir === 'AKAN HADIR'">
                     <div class="text-center" id="qrcode-download">
                       <h5>
-                        Terima Kasih {{ form.nama }} sudah mau hadir.
-                        <br />
-                        Ditunggu yaaa
+                        Terima Kasih {{ form.nama }} Ditunggu Kehadiranny.
                       </h5>
                       <img
                         :src="qrcode + route.params.id"
@@ -324,15 +322,17 @@
                     </div>
                   </div>
                   <div v-if="form.isHadir === 'TIDAK HADIR'">
-                    <h3>
-                      Atas Terimakasih Konfirmasi nya. Mohon do'a restu nya 
-                    </h3>
+                    <h3>Terimakasih sudah Konfirmasi</h3>
+                    <p>
+                      Mohon do'a restu nya yaaa 
+                    </p>
                     <button class="btn btn-secondary" data-bs-dismiss="modal">
                       Okeyyy
                     </button>
                   </div>
                   <div v-if="form.isHadir === 'SUDAH HADIR'">
-                    <h3>Kami Tunggu Kehadiran anda</h3>
+                    <h3>Terima Kasih Sudah Hadir</h3>
+                    <p>Mohon do'a restu nya yaaa </p>
                     <button class="btn btn-secondary" data-bs-dismiss="modal">
                       Okeyyy
                     </button>
