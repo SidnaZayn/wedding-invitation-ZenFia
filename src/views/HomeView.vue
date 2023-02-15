@@ -327,8 +327,7 @@
                     Ariesty Rizky Aliefia
                   </p>
                   <input type="text" value=" 087725872057 an.Ariesty Rizky Aliefia" id="myInput">
-                  <button onclick="myFunction()">
-                    <i class="bi bi-clipboard">Copy</i></button>
+<button onclick="myFunction()">Copy</button>
 
                 </div>
               </div>
@@ -468,6 +467,20 @@ onMounted(async () => {
   form.value.sebagai = tamu[3];
   form.value.isHadir = tamu[4];
 });
+function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("myInput");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+  
+  // Alert the copied text
+  alert("Copied the text: " + copyText.value);
+}
 
 //rsvp
 let form = ref({
@@ -537,17 +550,5 @@ const x = setInterval(function () {
     clearInterval(x);
     document.getElementById("countdown").innerHTML = "<h1>Sudah Halal</h1>";
   }
-  // Get the text field
-  var copyText = document.getElementById("myInput");
-
-  // Select the text field
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); // For mobile devices
-
-  // Copy the text inside the text field
-  navigator.clipboard.writeText(copyText.value);
-
-  // Alert the copied text
-  alert("Copied the text: " + copyText.value);
 }, 1000);
 </script>
