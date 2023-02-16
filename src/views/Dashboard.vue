@@ -51,11 +51,11 @@
       <div class="row mt-5 mx-3">
         <div class="col-6">
           <!-- Button trigger modal -->
-          <button type="button" class="btn btn-secondary btn-sm mt-2" data-bs-toggle="modal"
+          <button type="button" class="btn btn-secondary btn-sm mt-2 p-2" data-bs-toggle="modal"
             data-bs-target="#exampleModal">
             <i class="bi bi-plus"></i>
           </button>
-          <button type="button" class="btn btn-secondary btn-sm mt-2" data-bs-toggle="modal"
+          <button type="button" class="btn btn-secondary btn-sm mt-2 p-2" data-bs-toggle="modal"
             data-bs-target="">
             <i class="bi bi-qr-code"></i>
           </button>
