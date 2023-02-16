@@ -180,6 +180,7 @@
             <button @click="submitUcapan()" class="btn btn-outline-secondary">Kirim</button>
           </div>
         </div>
+        <marquee>A scrolling text created with HTML Marquee element.</marquee>
       </section>
       <section id="presensi">
         <!-- Button trigger modal -->
@@ -576,3 +577,11 @@ const x = setInterval(function () {
   }
 }, 1000);
 </script>
+<style>
+marquee{
+      font-size: 30px;
+      font-weight: 200;
+      color: #8ebf42;
+      font-family: sans-serif;
+      }
+</style>
