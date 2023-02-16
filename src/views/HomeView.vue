@@ -238,15 +238,37 @@
               <div class="modal-body p-2">
                 <div class="text-center m-3">
                   <div v-if="form.isHadir === 'BELUM KONFIRMASI'">
-                    <button type="button" @click.prevent="kehadiran('TIDAK HADIR')"
-                      class="btn btn btn-outline-secondary">
-                      Saya Tidak Hadir
-                    </button>
-                    &nbsp;&nbsp;
-                    <button type="button" @click.prevent="kehadiran('AKAN HADIR')"
-                      class="btn btn btn-outline-secondary">
-                      Saya Hadir
-                    </button>
+                    <form>
+                      <div class="mb-2">
+                        <div class="row">
+                          <div class="col-6">
+                            <label for="nama">Nama</label>
+                            <input type="text" class="form-control" name="nama" v-model="jumlahTamu.nama">
+                          </div>
+                          <div class="col-6">
+                            <label for="asal">Asal</label>
+                            <input type="text" class="form-control" name="asal" v-model="jumlahTamu.asal">
+                          </div>
+                        </div>
+                        <div class="row mb-2">
+                          <div class="col-12">
+                            <label for="jumlah_tamu">Jumlah Tamu</label>
+                            <input type="number" class="form-control" name="jumlah_tamu"
+                              v-model="jumlahTamu.jumlah_tamu">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-center mt-2">
+                        <button type="button" @click.prevent="kehadiran('TIDAK HADIR')"
+                          class="btn btn btn-outline-danger me-2">
+                          Saya Tidak Hadir
+                        </button>
+                        <button type="submit" @click.prevent="kehadiran('AKAN HADIR'), submitJumlahTamu()"
+                          class="btn btn btn-outline-success">
+                          Saya Hadir
+                        </button>
+                      </div>
+                    </form>
                   </div>
                   <div v-if="form.isHadir === 'AKAN HADIR'">
                     <div class="text-center" id="qrcode-download">
@@ -495,6 +517,17 @@ const ambilUcapan = async () => {
     console.log(element)
     ucapan.value += element[1] + ' : "' + element[3] + '". asal ' + element[2] + ' | '
   });
+};
+
+const jumlahTamu = ref({
+  nama: "",
+  asal: "",
+  jumlah_tamu: 0
+});
+
+const submitJumlahTamu = async () => {
+  const data = jumlahTamu.value
+  const res = await axios.post('jumlah_tamu?nama=' + data.nama + '&asal=' + data.asal + "&jumlah_tamu=" + data.jumlah_tamu);
 };
 
 //rsvp

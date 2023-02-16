@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import QRScannerCamera from '../views/QRScannerCamera.vue'
 import NotFoundPageView from '../views/NotFoundView.vue'
 import Dashboard from "../views/Dashboard.vue";
+import DashboardJumlahTamu from "../views/DashboardJumlahTamu.vue";
 import Login from "../views/Login.vue";
 import BuatAyang from "../views/buatAyang.vue";
 
@@ -42,6 +43,14 @@ const router = createRouter({
       path: '/dashboard',
       name: 'Dashboard',
       component: Dashboard,
+      meta: {
+        isAuth: true
+      }
+    },
+    {
+      path: '/dashboard-jumlah-tamu',
+      name: 'DashboardJumlahTamu',
+      component: DashboardJumlahTamu,
       meta: {
         isAuth: true
       }

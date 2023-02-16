@@ -51,14 +51,13 @@
       <div class="row mt-5 mx-3">
         <div class="col-6">
           <!-- Button trigger modal -->
-          <button type="button" class="btn btn-secondary btn-sm mt-2" data-bs-toggle="modal"
+          <button type="button" class="btn btn-secondary btn-sm mt-2 me-2" data-bs-toggle="modal"
             data-bs-target="#exampleModal">
             Tambah Tamu Undangan
           </button>
-          <button type="button" class="btn btn-secondary btn-sm mt-2" data-bs-toggle="modal"
-            data-bs-target="">
+          <router-link to="/dashboard-jumlah-tamu" type="button" class="btn btn-secondary btn-sm mt-2" >
             <i class="bi bi-qr-code"></i>
-          </button>
+          </router-link>
         </div>
         <div class="col-6">
           <form class="d-flex">
