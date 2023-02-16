@@ -488,7 +488,7 @@ onMounted(async () => {
   form.value.isHadir = tamu[4];
 });
 
-const ucapan = ref();
+const ucapan = ref('');
 const ambilUcapan = async () => {
   const lihatUcapan = await axios.get("ucapan");
   lihatUcapan.data.forEach(element => {
