@@ -253,7 +253,7 @@
                       <h5>
                         Terima Kasih {{ form.nama }} Ditunggu Kehadirannya.
                       </h5>
-                      <img :src="qrcode + route.params.id" alt="qrnama" class="my-3" />
+                      <img :src="qrcode + form.nama + ' | ' + form.asal" alt="qrnama" class="my-3" />
                       <br />
                       <small>
                         Tunjukan Qrcode ini ketika anda akan chek in ke acara kami, untuk Konfirmasi kehadiran
