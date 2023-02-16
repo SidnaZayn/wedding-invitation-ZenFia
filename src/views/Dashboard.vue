@@ -55,6 +55,10 @@
             data-bs-target="#exampleModal">
             Tambah Tamu Undangan
           </button>
+          <button type="button" class="btn btn-secondary btn-sm mt-2" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            Tamu yang sudah mendapatkan Qrcode
+          </button>
         </div>
         <div class="col-6">
           <form class="d-flex">
@@ -170,14 +174,6 @@
               ">
                 Tambah Tamu
               </button>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                  <button type="button" class="btn btn-primary" @click="tambahTamu()" data-bs-dismiss="modal">
-                Tamu yang sudah mendapat Qrcode
-              </button>
-                  Close
-                </button>
-              </div>
             </div>
           </div>
         </div>
