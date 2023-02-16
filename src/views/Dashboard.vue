@@ -53,7 +53,7 @@
           <!-- Button trigger modal -->
           <button type="button" class="btn btn-secondary btn-sm mt-2" data-bs-toggle="modal"
             data-bs-target="#exampleModal">
-            Tambah Tamu Undangan
+            <i class="bi bi-plus"></i>
           </button>
           <button type="button" class="btn btn-secondary btn-sm mt-2" data-bs-toggle="modal"
             data-bs-target="">
