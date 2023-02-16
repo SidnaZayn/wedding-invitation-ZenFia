@@ -172,6 +172,9 @@
               </button>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                  <button type="button" class="btn btn-primary" @click="tambahTamu()" data-bs-dismiss="modal">
+                Tamu yang sudah mendapat Qrcode
+              </button>
                   Close
                 </button>
               </div>
