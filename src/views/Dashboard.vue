@@ -56,8 +56,8 @@
             Tambah Tamu Undangan
           </button>
           <button type="button" class="btn btn-secondary btn-sm mt-2" data-bs-toggle="modal"
-            data-bs-target="#exampleModal">
-            Tamu yang sudah mendapatkan Qrcode
+            data-bs-target="">
+            <i class="bi bi-qr-code"></i>
           </button>
         </div>
         <div class="col-6">
