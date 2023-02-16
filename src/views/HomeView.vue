@@ -180,7 +180,9 @@
             <button @click="submitUcapan()" class="btn btn-outline-secondary">Kirim</button>
           </div>
         </div>
-        <marquee>A scrolling text created with HTML Marquee element.</marquee>
+        <div class="text-success fs-4">
+          <marquee>{{ ucapan }}</marquee>
+        </div>
       </section>
       <section id="presensi">
         <!-- Button trigger modal -->
@@ -249,7 +251,7 @@
                   <div v-if="form.isHadir === 'AKAN HADIR'">
                     <div class="text-center" id="qrcode-download">
                       <h5>
-                        Terima Kasih {{ form.nama }} Ditunggu Kehadiranny.
+                        Terima Kasih {{ form.nama }} Ditunggu Kehadirannya.
                       </h5>
                       <img :src="qrcode + route.params.id" alt="qrnama" class="my-3" />
                       <br />
@@ -304,7 +306,8 @@
                   <div class="input-group">
                     <input value="1390026051932" type="text" class="form-control" style="outline: none; border:none"
                       id="myInput" disabled>
-                    <span style="cursor:pointer; outline: none; border:none;" class="input-group-text" @click="myFunction('myInput')"><i class="bi bi-clipboard"></i></span>
+                    <span style="cursor:pointer; outline: none; border:none;" class="input-group-text"
+                      @click="myFunction('myInput')"><i class="bi bi-clipboard"></i></span>
                   </div>
                   <p class="card-text">
                     Ariesty Rizky Aliefia (Mandiri)
@@ -313,7 +316,8 @@
                   <div class="input-group">
                     <input value="0545 01016247509" type="text" class="form-control" style="outline: none; border:none"
                       id="myInput1" disabled>
-                    <span style="cursor:pointer; outline: none; border:none;" class="input-group-text" @click="myFunction('myInput1')"><i class="bi bi-clipboard"></i></span>
+                    <span style="cursor:pointer; outline: none; border:none;" class="input-group-text"
+                      @click="myFunction('myInput1')"><i class="bi bi-clipboard"></i></span>
                   </div>
                   <p class="card-text">
                     Sidna Muhammad Zen (BRI)
@@ -329,7 +333,8 @@
                   <div class="input-group">
                     <input value="087725672057" type="text" class="form-control" style="outline: none; border:none"
                       id="myInput2" disabled>
-                    <span style="cursor:pointer; outline: none; border:none;" class="input-group-text" @click="myFunction('myInput2')"><i class="bi bi-clipboard"></i></span>
+                    <span style="cursor:pointer; outline: none; border:none;" class="input-group-text"
+                      @click="myFunction('myInput2')"><i class="bi bi-clipboard"></i></span>
                   </div>
                   <p>Ariesty Rizky Aliefia
                   </p>
@@ -337,7 +342,8 @@
                   <div class="input-group">
                     <input value="081226158294" type="text" class="form-control" style="outline: none; border:none"
                       id="myInput3" disabled>
-                    <span style="cursor:pointer; outline: none; border:none;" class="input-group-text" @click="myFunction('myInput3')"><i class="bi bi-clipboard"></i></span>
+                    <span style="cursor:pointer; outline: none; border:none;" class="input-group-text"
+                      @click="myFunction('myInput3')"><i class="bi bi-clipboard"></i></span>
                   </div>
                   <p class="card-text">
                     Sidna Muhammad Zen
@@ -474,12 +480,22 @@ const route = useRoute();
 const id = route.params.id;
 onMounted(async () => {
   const getTamu = await axios.get("lihat_data_satu_tamu?id=" + id);
+  await ambilUcapan();
   const tamu = getTamu.data[0];
   form.value.nama = tamu[1];
   form.value.asal = tamu[2];
   form.value.sebagai = tamu[3];
   form.value.isHadir = tamu[4];
 });
+
+const ucapan = ref();
+const ambilUcapan = async () => {
+  const lihatUcapan = await axios.get("ucapan");
+  lihatUcapan.data.forEach(element => {
+    console.log(element)
+    ucapan.value += element[1] + ' : "' + element[3] + '". asal ' + element[2] + ' | '
+  });
+};
 
 //rsvp
 let form = ref({
@@ -519,7 +535,7 @@ function myFunction(text) {
   return new Promise((res, rej) => {
     document.execCommand("copy") ? res() : rej();
     textArea.remove();
-  });
+  });
 };
 
 //qrcode
@@ -577,11 +593,3 @@ const x = setInterval(function () {
   }
 }, 1000);
 </script>
-<style>
-marquee{
-      font-size: 30px;
-      font-weight: 200;
-      color: #8ebf42;
-      font-family: sans-serif;
-      }
-</style>
