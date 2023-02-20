@@ -246,8 +246,6 @@
 import { computed, onMounted, ref } from "@vue/runtime-core";
 import axios from "axios";
 
-const searchInput = ref("");
-
 const deleteTamu = async (id) => {
   if (confirm("apakah anda akan menghapus data ini?") == true) {
     const res = await axios.delete("delete_data_satu_tamu?id=" + id);
@@ -258,6 +256,7 @@ const deleteTamu = async (id) => {
 
   await getTamu()
 }
+const searchInput = ref("");
 
 const searchName = async () => {
   const res = await axios.get("search?params=" + searchInput.value);

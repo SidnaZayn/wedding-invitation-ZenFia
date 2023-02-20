@@ -41,6 +41,20 @@
                 <h2>Jumlah Tamu yang Akan Hadir</h2>
             </div>
             <div class="card shadow-lg p-2 m-4">
+                <div class="row m-3">
+                    <div class="col-6"></div>
+                    <div class="col-6">
+                        <form class="d-flex">
+                          <input class="form-control me-2" type="search name" placeholder="Search" v-model="searchInput" />
+                          <button class="btn btn-outline-success me-2" @click.prevent="searchName()">
+                            Search
+                          </button>
+                          <button class="btn btn-warning" @click.prevent="resetSearch()">
+                            Reset
+                          </button>
+                        </form>
+                      </div>
+                </div>
                 <table class="table mt-2">
                     <tr>
                         <th class="text-center fs-10">Nama</th>
@@ -119,6 +133,21 @@ const cancelStatus = async (id) => {
     alert(res.data);
     await getJumlahTamu();
 }
+
+const searchInput = ref("");
+
+const searchName = async () => {
+  const res = await axios.get("search_jumlah?params=" + searchInput.value);
+  jumlahTamu.value = res.data;
+  dataTable.value = jumlahTamu.value.slice(0, 5);
+};
+
+const resetSearch = async () => {
+  const res = await axios.get("search_jumlah?params=");
+  jumlahTamu.value = res.data;
+  dataTable.value = jumlahTamu.value.slice(0, 5);
+  searchInput.value = "";
+};
 
 const pagination_increment = () => {
     const data_ = jumlahTamu.value;
