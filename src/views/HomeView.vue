@@ -273,9 +273,9 @@
                   <div v-if="form.isHadir === 'AKAN HADIR'">
                     <div class="text-center" id="qrcode-download">
                       <h5>
-                        Terima Kasih {{ form.nama }} Ditunggu Kehadirannya.
+                        Terima Kasih {{ jumlahTamu.nama }} Ditunggu Kehadirannya.
                       </h5>
-                      <img :src="qrcode + form.nama + ' | ' + form.asal" alt="qrnama" class="my-3" />
+                      <img :src="qrcode + jumlahTamu.nama + ' | ' + jumlahTamu.asal" alt="qrnama" class="my-3" />
                       <br />
                       <small>
                         Tunjukan Qrcode ini ketika anda akan chek in ke acara kami, untuk Konfirmasi kehadiran
