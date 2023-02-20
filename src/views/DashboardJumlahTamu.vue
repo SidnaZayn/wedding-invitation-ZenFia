@@ -58,11 +58,13 @@
                         <td class="text-center fs-10">
                             {{ data[3] }}
                         </td>
-                        <td>
-                            <!-- {{data[4]}} -->
-                            <button class="btn btn-success text-dark" @click="ubahStatus(data[0])">Sudah Hadir</button>
-                            <!-- <button v-show="data[4] === 'SUDAH HADIR'" class="btn btn-danger"
-                                @click="cancelStatus(data[0])">Batalkan Kehadiran</button> -->
+                        <td class="text-center">
+                            <span v-if="data[4] === 'SUDAH HADIR'">
+                                <button class="btn btn-danger" @click="cancelStatus(data[0])">Batalkan Kehadiran</button>
+                            </span>
+                            <span v-else>
+                                <button class="btn btn-success" @click="ubahStatus(data[0])">Sudah Hadir</button>
+                            </span>
                         </td>
                     </tr>
                 </table>
