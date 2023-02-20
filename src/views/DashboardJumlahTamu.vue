@@ -45,7 +45,8 @@
                     <tr>
                         <th class="text-center fs-10">Nama</th>
                         <th class="text-center fs-10">Alamat</th>
-                        <th class="text-center fs-10">jumlah_tamu</th>
+                        <th class="text-center fs-10">Jumlah Tamu</th>
+                        <th class="text-center fs-10">Ubah Status</th>
                     </tr>
                     <tr v-for="(data, index) in dataTable" :key="index">
                         <td class="text-center fs-10">
@@ -56,6 +57,12 @@
                         </td>
                         <td class="text-center fs-10">
                             {{ data[3] }}
+                        </td>
+                        <td>
+                            <!-- {{data[4]}} -->
+                            <button class="btn btn-success text-dark" @click="ubahStatus(data[0])">Sudah Hadir</button>
+                            <!-- <button v-show="data[4] === 'SUDAH HADIR'" class="btn btn-danger"
+                                @click="cancelStatus(data[0])">Batalkan Kehadiran</button> -->
                         </td>
                     </tr>
                 </table>
@@ -85,6 +92,7 @@ onMounted(async () => {
 const TotaljumlahTamu = ref(0);
 const jumlahTamu = ref({});
 const getJumlahTamu = async () => {
+    TotaljumlahTamu.value = 0;
     const res = await axios.get('jumlah_tamu');
     jumlahTamu.value = res.data;
     dataTable.value = jumlahTamu.value.slice(0, 5);
@@ -97,6 +105,18 @@ const pagi_num = ref({
     start: 0,
     end: 5,
 });
+
+const ubahStatus = async (id) => {
+    const res = await axios.get('ubah_status?id=' + id);
+    alert(res.data);
+    await getJumlahTamu();
+}
+
+const cancelStatus = async (id) => {
+    const res = await axios.get('cancel_ubah_status?id=' + id);
+    alert(res.data);
+    await getJumlahTamu();
+}
 
 const pagination_increment = () => {
     const data_ = jumlahTamu.value;
