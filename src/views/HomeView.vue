@@ -237,7 +237,32 @@
               </div>
               <div class="modal-body p-2">
                 <div class="text-center m-3">
-                  <div v-if="form.isHadir === 'BELUM KONFIRMASI'">
+                  <div v-if="form.isHadir === 'AKAN HADIR'">
+                    <div class="text-center" id="qrcode-download">
+                      <h5>
+                        Terima Kasih {{ jumlahTamu.nama }} Ditunggu Kehadirannya.
+                      </h5>
+                      <img :src="qrcode + jumlahTamu.nama + ' | ' + jumlahTamu.asal" alt="qrnama" class="my-3" />
+                      <br />
+                      <small>
+                        Simpan & tunjukan QRCode ini ketika anda akan check-in ke acara kami, untuk Konfirmasi kehadiran
+                      </small>
+                      <br />
+                      <button class="btn btn-secondary mt-2" data-bs-dismiss="modal">
+                        Okeyyy
+                      </button>
+                    </div>
+                  </div>
+                  <div v-if="form.isHadir === 'TIDAK HADIR'">
+                    <h3>Terimakasih sudah Konfirmasi</h3>
+                    <p>
+                      Mohon do'a restu nya yaaa
+                    </p>
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">
+                      Okeyyy
+                    </button>
+                  </div>
+                  <div v-if="!form.isHadir">
                     <form>
                       <div class="mb-2">
                         <div class="row">
@@ -269,38 +294,6 @@
                         </button>
                       </div>
                     </form>
-                  </div>
-                  <div v-if="form.isHadir === 'AKAN HADIR'">
-                    <div class="text-center" id="qrcode-download">
-                      <h5>
-                        Terima Kasih {{ jumlahTamu.nama }} Ditunggu Kehadirannya.
-                      </h5>
-                      <img :src="qrcode + jumlahTamu.nama + ' | ' + jumlahTamu.asal" alt="qrnama" class="my-3" />
-                      <br />
-                      <small>
-                        Tunjukan Qrcode ini ketika anda akan chek in ke acara kami, untuk Konfirmasi kehadiran
-                      </small>
-                      <br />
-                      <button class="btn btn-secondary" data-bs-dismiss="modal">
-                        Okeyyy
-                      </button>
-                    </div>
-                  </div>
-                  <div v-if="form.isHadir === 'TIDAK HADIR'">
-                    <h3>Terimakasih sudah Konfirmasi</h3>
-                    <p>
-                      Mohon do'a restu nya yaaa
-                    </p>
-                    <button class="btn btn-secondary" data-bs-dismiss="modal">
-                      Okeyyy
-                    </button>
-                  </div>
-                  <div v-if="form.isHadir === 'SUDAH HADIR'">
-                    <h3>Terima Kasih Sudah Hadir</h3>
-                    <p>Mohon do'a restu nya yaaa </p>
-                    <button class="btn btn-secondary" data-bs-dismiss="modal">
-                      Okeyyy
-                    </button>
                   </div>
                 </div>
               </div>
@@ -507,7 +500,6 @@ onMounted(async () => {
   form.value.nama = tamu[1];
   form.value.asal = tamu[2];
   form.value.sebagai = tamu[3];
-  form.value.isHadir = tamu[4];
 });
 
 const ucapan = ref('');
