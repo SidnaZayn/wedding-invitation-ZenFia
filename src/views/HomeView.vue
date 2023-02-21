@@ -308,12 +308,13 @@
         <div class="text-center">
           <div class="p-4 rounded-3 mt-2 mx-3 shadow-sm" data-aos="flip-down" style="background-color: #f8f8f899">
             <h2 class="card-title cal">Amplop Digital</h2>
-            <small class="card-text mt-3">Doa restu anda merupakan karunia yang sangat berarti bagi kami
+            <small class="card-text mt-4">Doa restu anda merupakan karunia yang sangat berarti bagi kami
               dan jika memberi adalah ungkapan tanda terima kasih anda, anda
-              dapat memberi kado secara cashless</small>
+              dapat memberi kado secara cashless</small> <br>
+              <button class="btn btn-sm btn-outline-success mt-4" @click="lihatAmplop()">Lihat Amplop Digital</button>
           </div>
-          <div class="row mt-2 p-3">
-            <div class="col" data-aos="flip-right">
+          <div data-aos="flip-right" data-aos-duration="500" class="row mt-2 p-3" v-show="isAmplopOpen">
+            <div class="col">
               <div class="card shadow-sm">
                 <div class="card-body">
                   <h5 class="card-title cal">Via Bank</h5>
@@ -544,6 +545,10 @@ const kehadiran = async (value) => {
   );
   form.value.isHadir = value;
 };
+const isAmplopOpen = ref(false);
+const lihatAmplop = () =>{
+  isAmplopOpen.value = !isAmplopOpen.value;
+}
 function myFunction(text) {
   let textToCopy = document.getElementById(text).value;
 
