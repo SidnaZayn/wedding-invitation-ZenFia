@@ -499,7 +499,6 @@ const id = route.params.id;
 let i = reactive(0);
 onMounted(async () => {
   const getTamu = await axios.get("lihat_data_satu_tamu?id=" + id);
-  console.log(getapp.data);
   await ambilUcapan();
   window.setInterval(() => {
     ucapan.value = ucapan_.value[i];
