@@ -161,27 +161,30 @@
           </div>
           <div data-aos="flip-left" class="p-4 rounded-3 mx-3 shadow-sm" style="background-color: #f8f8f899">
             <h2 class="card-title font-2 text-center" data-aos="flip-right">Kirim Kartu Ucapan</h2>
-            <p data-aos="flip-right">
-            <div class="mb-3">
-              <label for="text" class="form-label">Name</label>
-              <input type="text" v-model="form.nama" class="form-control" id="text">
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Asal</label>
-              <input type="text" v-model="form.asal" class="form-control" id="text">
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
-              <textarea class="form-control" rows="3" v-model="form.pesan"></textarea>
-            </div>
-            </p>
+            <span data-aos="flip-right">
+              <div class="mb-3">
+                <label for="text" class="form-label">Name</label>
+                <input type="text" v-model="form.nama" class="form-control" id="text">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Asal</label>
+                <input type="text" v-model="form.asal" class="form-control" id="text">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
+                <textarea class="form-control" rows="3" v-model="form.pesan"></textarea>
+              </div>
+            </span>
           </div>
           <div class="text-center m-4">
             <button @click="submitUcapan()" class="btn btn-outline-secondary">Kirim</button>
           </div>
         </div>
-        <div class="text-success fs-4">
-          <marquee>{{ ucapan }}</marquee>
+        <div class="text-center p-2 card rounded-3 mx-2 shadow">
+          <!-- {{ ucapan }} -->
+          <p class="my-1 fs-2 cal">{{ ucapan[1] }} :</p>
+          <p class="my-1 fs-7">{{ ucapan[3] }}</p>
+          <p class="my-1 fs-6 font-2">-{{ ucapan[2] }}-</p>
         </div>
       </section>
       <section id="presensi">
@@ -278,8 +281,7 @@
                         <div class="row mb-2">
                           <div class="col-12">
                             <label for="jumlah_tamu">Jumlah Tamu</label>
-                            <input type="number" class="form-control" name="jumlah_tamu"
-                              v-model="jumlahTamu.jumlah_tamu">
+                            <input type="number" class="form-control" name="jumlah_tamu" v-model="jumlahTamu.jumlah_tamu">
                           </div>
                         </div>
                       </div>
@@ -311,7 +313,7 @@
             <small class="card-text mt-4">Doa restu anda merupakan karunia yang sangat berarti bagi kami
               dan jika memberi adalah ungkapan tanda terima kasih anda, anda
               dapat memberi kado secara cashless</small> <br>
-              <button class="btn btn-sm btn-outline-success mt-4" @click="lihatAmplop()">Lihat Amplop Digital</button>
+            <button class="btn btn-sm btn-outline-success mt-4" @click="lihatAmplop()">Lihat Amplop Digital</button>
           </div>
           <div data-aos="flip-right" data-aos-duration="500" class="row mt-2 p-3" v-show="isAmplopOpen">
             <div class="col">
@@ -494,22 +496,29 @@ import { useRoute } from "vue-router";
 
 const route = useRoute();
 const id = route.params.id;
+let i = reactive(0);
 onMounted(async () => {
   const getTamu = await axios.get("lihat_data_satu_tamu?id=" + id);
   await ambilUcapan();
+  window.setInterval(() => {
+    ucapan.value = ucapan_.value[i];
+    if (i === ucapan_.value.length) {
+      i = 0;
+    } else {
+      i = i + 1;
+    }
+  }, 3000);
   const tamu = getTamu.data[0];
   form.value.nama = tamu[1];
   form.value.asal = tamu[2];
   form.value.sebagai = tamu[3];
 });
 
-const ucapan = ref('');
+const ucapan = ref([]);
+const ucapan_ = ref([]);
 const ambilUcapan = async () => {
   const lihatUcapan = await axios.get("ucapan");
-  lihatUcapan.data.forEach(element => {
-    console.log(element)
-    ucapan.value += element[1] + ' : "' + element[3] + '". asal ' + element[2] + ' | '
-  });
+  ucapan_.value = lihatUcapan.data;
 };
 
 const jumlahTamu = ref({
@@ -546,13 +555,11 @@ const kehadiran = async (value) => {
   form.value.isHadir = value;
 };
 const isAmplopOpen = ref(false);
-const lihatAmplop = () =>{
+const lihatAmplop = () => {
   isAmplopOpen.value = !isAmplopOpen.value;
 }
 function myFunction(text) {
   let textToCopy = document.getElementById(text).value;
-
-  console.log(textToCopy);
   // text area method
   let textArea = document.createElement("textarea");
   textArea.value = textToCopy;
