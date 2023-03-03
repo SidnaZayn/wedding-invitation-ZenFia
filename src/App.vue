@@ -1,5 +1,11 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import axios from 'axios';
+import { onMounted } from 'vue';
+import { RouterLink, RouterView } from 'vue-router';
+
+onMounted(async()=>{
+  const getapp = await axios.get("health");
+});
 </script>
 
 <template>
