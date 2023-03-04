@@ -180,11 +180,22 @@
             <button @click="submitUcapan()" class="btn btn-outline-secondary">Kirim</button>
           </div>
         </div>
-        <div class="text-center p-2 card rounded-3 mx-2 shadow">
-          <!-- {{ ucapan }} -->
-          <p class="my-1 fs-2 cal">{{ ucapan[1] }} :</p>
-          <p class="my-1 fs-7">{{ ucapan[3] }}</p>
-          <p class="my-1 fs-6 font-2">-{{ ucapan[2] }}-</p>
+        <div class="p-2 card rounded-3 mx-2 shadow-sm">
+          <div class="text-center">
+            <p class="fs-4 m-0 text-center cal">Selayang Pandang</p>
+            <span class="px-2">
+              <hr class="hr-2" />
+            </span>
+          </div>
+          <div class="p-2">
+            <marquee scrollmount="1" direction="up" style="max-height: 20rem;">
+              <div class="p-3 mb-4 rounded-3 shadow-sm" v-for="ucapan in ucapans" :key="ucapan.id" style="background-color: #f8f8f899">
+                <p class="my-1 fs-2 font-2">{{ ucapan[1] }} :</p>
+                <small class="my-1">{{ ucapan[3] }}</small>
+                <p class="my-1 fs-6 font-2">-{{ ucapan[2] }}-</p>
+              </div>
+            </marquee>
+          </div>
         </div>
       </section>
       <section id="presensi">
@@ -199,7 +210,9 @@
         <section id="countdown" class="text-center">
           <div class="p-4 rounded-3 shadow-sm m-3 text-center" style="background-color: #f8f8f899">
             <h1 class="cal" data-aos="flip-down">Menuju Acara</h1>
-            <hr class="hr-1 mb-4" data-aos="zoom-in" />
+            <span class="p-4">
+              <hr class="hr-1 mb-4" data-aos="zoom-in" />
+            </span>
             <div class="row">
               <div class="col-3" data-aos="flip-right">
                 <div class="p-3 rounded-3 shadow-sm mb-2" style="background-color: #fce592">
@@ -451,7 +464,7 @@
         </div>
 
         <!-- watermark -->
-        <div class="row" data-aos="fade-up" data-aos-delay="200">
+        <div class="row mb-3" data-aos="fade-up" data-aos-delay="200">
           <div class="col-12 bg-success">
             <div class="p-3 text-center text-light">
               Online Invitation by
@@ -500,25 +513,17 @@ let i = reactive(0);
 onMounted(async () => {
   const getTamu = await axios.get("lihat_data_satu_tamu?id=" + id);
   await ambilUcapan();
-  window.setInterval(() => {
-    ucapan.value = ucapan_.value[i];
-    if (i === ucapan_.value.length) {
-      i = 0;
-    } else {
-      i = i + 1;
-    }
-  }, 3000);
   const tamu = getTamu.data[0];
   form.value.nama = tamu[1];
   form.value.asal = tamu[2];
   form.value.sebagai = tamu[3];
 });
 
-const ucapan = ref([]);
-const ucapan_ = ref([]);
+const ucapans = ref([]);
+// const ucapan_ = ref([]);
 const ambilUcapan = async () => {
   const lihatUcapan = await axios.get("ucapan");
-  ucapan_.value = lihatUcapan.data;
+  ucapans.value = lihatUcapan.data;
 };
 
 const jumlahTamu = ref({
