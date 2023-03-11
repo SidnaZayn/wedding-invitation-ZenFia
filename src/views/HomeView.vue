@@ -524,7 +524,6 @@ const ucapans = ref([]);
 const ambilUcapan = async () => {
   const lihatUcapan = await axios.get("ucapan");
   ucapans.value = lihatUcapan.data;
-  alert("Terima Kasih Sudah Memberikan Pesan.")
 };
 
 const jumlahTamu = ref({
@@ -551,8 +550,8 @@ let form = ref({
 const submitUcapan = async () => {
   const data = form.value
   const res = await axios.post('ucapan?nama=' + data.nama + '&asal=' + data.asal + '&pesan=' + data.pesan);
-  alert(res.data);
   form.value.pesan = "";
+  alert("Terima Kasih Sudah Memberikan Pesan.")
 };
 
 const kehadiran = async (value) => {
